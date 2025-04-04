@@ -40,6 +40,7 @@ Este proxecto foi creado debido a que non é a primeira vez que algún familiar 
 
 Formas de contactar conmigo:
 > *Correo electrónico*: manuelcanedab@gmail.com
+
 > *LinkedIn*: https://www.linkedin.com/in/manuel-caneda/
 
 ## Licenza
