@@ -19,23 +19,21 @@
   - [3- Requirimentos técnicos](#3--requirimentos-técnicos)
   - [4- Planificación](#4--planificación)
 
-> _EXPLICACIÓN_: Este documento será a páxina de explicación de en que consiste o teu proxecto. Coida a súa redacción con todo ou teu mimo. Elimina posteriormente todas as lineas "EXPLICACIÓN" cando creas finalizada a súa redacción.
-> Podes acompañar á redacción deste ficheiro con imaxes, pero non abuses deles.
-> Explica da mellor forma posible de en que consiste o proxecto é que ferramentas e linguaxes de programación empregarás.
-
 ## 1- Descrición do proxecto
+O proxecto consiste na elaboración dunha páxina na que poidas buscar unha empresa, autónomo ou asesor para que poidan realizar un servicio para tí de forma rápida e sencilla. Sendo así o propósito principal que as empresas ou traballadores poderían publicitarse e os usuarios da páxina poidan buscar os servicios que deseen nun mesmo lugar.
 
-> _EXPLICACIÓN_: Realiza unha breve descrición do anteproxecto.Resalta o fundamental *coas túas propias palabras\*\*. Utiliza unha linguaxe correcta, *pero natural\*\*, que o entenda todo o mundo, mesmo e en especial, as persoas que non teñan un coñecemento técnico avanzado. Pode ser un estracto ou resumo de apartados que xa contemples noutros ficheiros.
->
-> Neste apartado trátase de describir a análise realizada e a toma de decisións adoptada sobre aspectos básicos ou iniciais do proxecto como:
->
-> - ¿En que consiste o noso proxecto? ¿Cal é o propósito principal da aplicación a desenvolver? ¿Cales son os obxectivos?
-> - ¿O desenvolvemento da aplicación abre unha oportunidade de negocio? ¿É posible comercializala? Como?
-> - ¿Que tecnoloxías son as máis axeitadas para a realización do proxecto?
+Os obxectivos principais serían poder ter unha única web onde as persoas poidan publicitar os servicios que ofrecen e os usuarios desta poidan contratar moitas clases de servicios nun mesmo lugar, conectando así aos profesionais (de agora en diante, os clientes) cos usuarios.
+
+Esta aplicación abre unha oportunidade de negocio, xa que este proxecto pode verse económicamente beneficiada mediante o uso da publicidade, ademáis de que os nosos clientes terían a oportunidade de pagar unha suscripción mensual onde se lle permita facer anuncios ilimitados, certa ventaxa nas búsquedas dos usuarios aparecendo dos primeiros nestas, e unha maior posibilidade de saír no apartado de "Destacados".
+
+Tecnoloxías que serán utilizadas para a realización desta web:
+- **Linguaxes de programación**: HTML5, CSS3, JavaScript, PHP (MVC) (non se descarta a utilización dalgunha librería de PHP ou JavaScript).
+- **Prototipo**: Figma
+- **Comunicación asíncrona**: AJAX
+- **Bases de Datos**: MySQL - phpMyAdmin
+- **API Rest**: PHP
 
 ## 2- Empresa
-
-> _EXPLICACIÓN_: Neste apartado desenvolveredes todo o referente os módulos de Empresa e iniciativa emprendedora e de FOL.
 
 ### 2.1- Idea de negocio
 
@@ -55,14 +53,24 @@
 > Para sustentar as xustificación deberás proporcionar datos. Fontes máis utilizadas: INE, IGE, Informes sectoriais de
 > Industria, Statista... Deberás facer unha DAFO.
 
+A idea do proxecto xurdeu a partir de que a miña familia precisou de varios servicios nos últimos meses, sendo varios deles atrasados durante moitos anos (por exemplo, non contratar un electricista para poñer unhas lámparas na casa durante case 20 anos) debido a non saber ónde buscar algunha empresa ou autónomo que poida satisfaccer as súas necesidades. Desta forma, o obxectivo que ten a creación desta web sería que non se repitan máis casos coma este, e os usuarios poidan buscar de forma rápida, sencilla e nun mesmo lugar prácticamente calquera servicio.
+
+As necesidades a cubrir serían: 
+- Para os clientes: poder publicitar os seus servicios e así aumentar o seu número de ventas, e por ende, de beneficios.
+- Para os usuarios: poder encontrar de forma rápida, sencilla e nun mesmo lugar un servicio que poida satisfacer as súas necesidades (como pode ser contratar un pintor, arquitecto, desenvolvedor web...).
+
+Existen aplicacións deste tipo como son Fiverr ou incluso Milanuncios, aínda que no caso de Fiverr está máis orientado ao apartado tecnolóxico ou marketing, e Milanuncios está máis orientado á venta de productos físicos.
+
+Según Scopen, as empresas españolas destinan un aproximado do 3,7% da súa facturación á publicidade. Este porcentaxe non é excesivamente alto, e aínda que se aproxima que o nivel de satisfacción é dun 93%, pensamos que darlle un espazo ás empresas para publicitarse incluso de forma gratuita sería beneficioso para eles, ao non ter que dirixir tanto da súa facturación á publicidade.
+
+Aínda que existen algunhas solucións no mercado, estas son insuficientes debido ao que abarcan, xa que ningún está tan orientado á publicidade de servicios de empresas.
+
 ### 2.3- Segmento de clientes
 
-> _EXPLICACIÓN_: Neste apartado debes indicar a quen irá dirixido o negocio, os potenciales clientes, respostando as seguinte pregunta: ¿A quen está dirixido?
->
-> Debes:
->
-> - Indicar o segmento ou segmentos cos rasgos principais e cuantificar o mercado.
-> - E se é o caso, diferenciar entre usuario e cliente.
+A aplicación estará dirixida a:
+- Empresas, autónomos e asesores de todo tipo (clientes): estos poderán publicitar os seus servicios, publicando datos de contacto para que as persoas que queiran contratalos poidan contactar con eles. Poderán anunciar 3 servicios mensuais en caso de utilizar o plan gratuito da web. En caso de pagar pola suscripción mensual, poderán anunciar servicios infinitos, ademáis de que terán unha maior subida das ventas debido a que aparecerán dos primeiros nas búsquedas dos usuarios e terán máis posibilidades de sair no apartado de "Destacados".
+
+- Persoas interesadas en contratar un servicio (usuarios): Poderán acceder á páxina para contratar a calquera dos nosos clientes.
 
 ### 2.4- Competencia
 
@@ -118,11 +126,9 @@
 
 ## 3- Requirimentos técnicos
 
-> _EXPLICACIÓN_: Descrición dos medios materiais e das tecnoloxías necesarias que se usarán para desenvolver o proxecto incluíndo as linguaxes de programación frontend e backend, técnicas, librerías, bases de datos, servizos usados, servidores, API’s, etc.
->
-> - **Infraestructura:** dominio web, servidor web dedicado, servidor de base de datos, almacenamento, memoria, ...
-> - **Backend:** tecnoloxías usadas.
-> - **Frontend:** tecnoloxías usadas
+- **Infraestructura**: XAMPP.
+- **Backend**: PHP, MySQL - phpMyAdmin, API Rest con PHP (no se descarta la utilización de alguna librería de PHP).
+- **Frontend:** HTML5, CSS3, JavaScript, AJAX, Figma (no se descarta la utilización de alguna librería de JavaScript).
 
 ## 4- Planificación
 
