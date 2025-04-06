@@ -39,19 +39,13 @@ Tecnoloxías que serán utilizadas para a realización desta web:
 
 > _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
 
-### 2.2- Xustificación da idea
+Tendo en conta a idea mencionada no anterior punto, teríamos unha páxina web para conectar empresas, autónomos e asesores cos usuarios como produto central.
 
-> _EXPLICACIÓN_: Neste apartado incluirase a información necesaria para xustificar a realización do proxecto. Debe indicarse como xurdiu a idea do proxecto, que obxectivo se persegue coa súa posta en marcha e/ou que problema vai resolver.
->
-> En este apartado indicade a nivel de idea de negocio:
->
-> - ¿Cal é a necesidade ou necesidades que se pretenden cubrir ou satisfacer?
-> - ¿Existen na actualidade aplicacións ou productos que tenten dar resposta a esa(s) necesidade(s)? ¿En que medida o conseguen?
-> - ¿Trátase de un segmento de mercado desabastecido ou insuficientemente atendido?
-> - ¿Un produto ineficiente? Un mercado novo?
->
-> Para sustentar as xustificación deberás proporcionar datos. Fontes máis utilizadas: INE, IGE, Informes sectoriais de
-> Industria, Statista... Deberás facer unha DAFO.
+O valor engadido sería que así, os usuarios, poderían contactar de forma sencilla cunha empresa, autónomo ou asesor que poida satisfaccer algunha necesidade concreta, dándolle como utilidade o poder buscalo nun solo lugar de forma rápida e sencilla.
+
+Ademáis de que tamén serviría para os clientes poder publicitar os seus servicios, e lóxicamente obter unha valoración por eles. Terían o seu perfil onde poden ver os seus anuncios activos e así acceder a eles.
+
+### 2.2- Xustificación da idea
 
 A idea do proxecto xurdeu a partir de que a miña familia precisou de varios servicios nos últimos meses, sendo varios deles atrasados durante moitos anos (por exemplo, non contratar un electricista para poñer unhas lámparas na casa durante case 20 anos) debido a non saber ónde buscar algunha empresa ou autónomo que poida satisfaccer as súas necesidades. Desta forma, o obxectivo que ten a creación desta web sería que non se repitan máis casos coma este, e os usuarios poidan buscar de forma rápida, sencilla e nun mesmo lugar prácticamente calquera servicio.
 
