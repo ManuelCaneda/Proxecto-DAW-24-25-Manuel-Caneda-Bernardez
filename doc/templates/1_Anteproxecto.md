@@ -27,7 +27,8 @@ Os obxectivos principais serían poder ter unha única web onde as persoas poida
 Esta aplicación abre unha oportunidade de negocio, xa que este proxecto pode verse económicamente beneficiada mediante o uso da publicidade, ademáis de que os nosos clientes terían a oportunidade de pagar unha suscripción mensual onde se lle permita facer anuncios ilimitados, certa ventaxa nas búsquedas dos usuarios aparecendo dos primeiros nestas, e unha maior posibilidade de saír no apartado de "Destacados".
 
 Tecnoloxías que serán utilizadas para a realización desta web:
-- **Linguaxes de programación**: HTML5, CSS3, JavaScript, PHP (MVC) (non se descarta a utilización dalgunha librería de PHP ou JavaScript).
+- **Linguaxes de programación**: HTML5, CSS3, JavaScript, PHP (MVC)
+- **Librerías**: JavaScript: AOS, Math.js | PHP: 
 - **Prototipo**: Figma
 - **Comunicación asíncrona**: AJAX
 - **Bases de Datos**: MySQL - phpMyAdmin
@@ -140,5 +141,8 @@ A aplicación estará dirixida a:
 > - Codificación e probas (debe ser a fase máis longa).
 >
 > Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
+
+[!image](../img/gantt1.jpg)
+[!image](../img/gantt2.jpg)
 
 [**<-Anterior**](../../README.md)

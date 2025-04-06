@@ -18,7 +18,7 @@ Desenrolando...
 ## Descrición
 A idea sería a elaboración dunha páxina na que poidas buscar unha empresa, autónomo ou asesor para que poidan realizar un servicio para tí de forma rápida e sencilla. Desta forma, as empresas ou traballadores poderían publicitarse e os usuarios da páxina poderían buscar os servicios que deseen nun mesmo lugar. 
 
-As tecnoloxías que serán utilizadas para a realización desta web son: HTML5, CSS3, JavaScript, PHP (MVC) (**non se descarta a utilización dalgunha librería de PHP ou JavaScript** é obligatorio!!).
+As tecnoloxías que serán utilizadas para a realización desta web son: HTML5, CSS3, JavaScript, PHP (MVC) e o uso das librerías de JavaScript AOS e Math.js.
 
 ## Instalación / Posta en marcha
 
