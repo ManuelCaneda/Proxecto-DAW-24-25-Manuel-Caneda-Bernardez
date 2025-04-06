@@ -17,6 +17,7 @@
 ## 2- Fontes de interes
 
 - https://michalsnik.github.io/aos/
+- https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element
 
 ## 3- Sitios oficiais do software utilizado
 
