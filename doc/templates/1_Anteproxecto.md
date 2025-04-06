@@ -28,7 +28,7 @@ Esta aplicación abre unha oportunidade de negocio, xa que este proxecto pode ve
 
 Tecnoloxías que serán utilizadas para a realización desta web:
 - **Linguaxes de programación**: HTML5, CSS3, JavaScript, PHP (MVC)
-- **Librerías**: JavaScript: AOS, Math.js | PHP: 
+- **Librerías**: JavaScript: AOS, Math.js 
 - **Prototipo**: Figma
 - **Comunicación asíncrona**: AJAX
 - **Bases de Datos**: MySQL - phpMyAdmin
@@ -59,7 +59,6 @@ Según Scopen, as empresas españolas destinan un aproximado do 3,7% da súa fac
 Aínda que existen algunhas solucións no mercado, estas son insuficientes debido ao que abarcan, xa que ningún está tan orientado á publicidade de servicios de empresas.
 
 DAFO:
-
 ![image](../img/dafo.jpg)
 
 ### 2.3- Segmento de clientes
@@ -124,21 +123,11 @@ A aplicación estará dirixida a:
 ## 3- Requirimentos técnicos
 
 - **Infraestructura**: XAMPP.
-- **Backend**: PHP, MySQL - phpMyAdmin, API Rest con PHP (no se descarta la utilización de alguna librería de PHP).
-- **Frontend:** HTML5, CSS3, JavaScript, AJAX, Figma (no se descarta la utilización de alguna librería de JavaScript).
+- **Backend**: PHP, MySQL - phpMyAdmin, API Rest con PHP.
+- **Frontend:** HTML5, CSS3, JavaScript, AJAX, Figma
+- **Librerías**: JavaScript: AOS, Math.j.
 
 ## 4- Planificación
-
-> _EXPLICACIÓN_: Inclúe un calendario co tempo estimado a adicar a cada fase do proxecto.
->
-> O proxecto estará formado polas seguintes fases:
->
-> - Estudo preliminar
-> - Análise
-> - Deseño
-> - Codificación e probas (debe ser a fase máis longa).
->
-> Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
 
 [!image](../img/gantt1.jpg)
 [!image](../img/gantt2.jpg)
