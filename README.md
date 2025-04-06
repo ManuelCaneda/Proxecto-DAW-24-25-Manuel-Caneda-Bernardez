@@ -39,9 +39,8 @@ Creo que os meus puntos fortes son PHP (utilizando o Modelo-Vista-Controlador), 
 Este proxecto foi creado debido a que non é a primeira vez que algún familiar meu precisa dalgunha persoa (como son pintores ou electricistas) para realizar algún traballo e non saber donde buscar, polo que moitas veces deciden non facer nada por moito que o necesiten debido a que esto xeralmente non é un proceso moi rápido. Por ese motivo, púxenme a pensar e cheguei a conclusión de que creo que unha forma de solucionar esto sería mediante a elaboración dunha páxina web onde poidas encontrar unha empresa ou autónomo para calquera cousa de forma rápida e sencilla, ou incluso encontrar algún asesor para consultarlle algunha dúbida.
 
 Formas de contactar conmigo:
-> *Correo electrónico*: manuelcanedab@gmail.com
-
-> *LinkedIn*: https://www.linkedin.com/in/manuel-caneda/
+- *Correo electrónico*: manuelcanedab@gmail.com
+- *LinkedIn*: https://www.linkedin.com/in/manuel-caneda/
 
 ## Licenza
 
