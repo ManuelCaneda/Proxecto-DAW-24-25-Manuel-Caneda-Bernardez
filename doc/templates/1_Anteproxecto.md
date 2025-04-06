@@ -59,6 +59,7 @@ Según Scopen, as empresas españolas destinan un aproximado do 3,7% da súa fac
 Aínda que existen algunhas solucións no mercado, estas son insuficientes debido ao que abarcan, xa que ningún está tan orientado á publicidade de servicios de empresas.
 
 DAFO:
+
 ![image](../img/dafo.jpg)
 
 ### 2.3- Segmento de clientes
@@ -129,7 +130,7 @@ A aplicación estará dirixida a:
 
 ## 4- Planificación
 
-[!image](../img/gantt1.jpg)
-[!image](../img/gantt2.jpg)
+![image](../img/gantt1.jpg)
+![image](../img/gantt2.jpg)
 
 [**<-Anterior**](../../README.md)
