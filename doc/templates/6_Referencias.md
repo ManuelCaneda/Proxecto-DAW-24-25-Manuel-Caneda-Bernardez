@@ -10,9 +10,20 @@
 
 ## 1- Sitios web de documentación técnica
 
+- https://stackoverflow.com/questions
+- https://www.php.net/manual/es/index.php
+- https://scopen.com
+
 ## 2- Fontes de interes
 
+- https://michalsnik.github.io/aos/
+
 ## 3- Sitios oficiais do software utilizado
+
+- AOS: https://michalsnik.github.io/aos/
+- Math.js: https://mathjs.org
+- PHP: https://www.php.net
+- XAMPP: https://www.apachefriends.org/es/index.html
 
 ## 4- Normas ou documentos legais
 
