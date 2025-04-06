@@ -38,8 +38,6 @@ Tecnoloxías que serán utilizadas para a realización desta web:
 
 ### 2.1- Idea de negocio
 
-> _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
-
 Tendo en conta a idea mencionada no anterior punto, teríamos unha páxina web para conectar empresas, autónomos e asesores cos usuarios como produto central.
 
 O valor engadido sería que así, os usuarios, poderían contactar de forma sencilla cunha empresa, autónomo ou asesor que poida satisfaccer algunha necesidade concreta, dándolle como utilidade o poder buscalo nun solo lugar de forma rápida e sencilla.
