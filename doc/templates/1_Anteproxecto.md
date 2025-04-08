@@ -129,6 +129,7 @@ A aplicación estará dirixida a:
 - **Librerías**: JavaScript: AOS, Math.j.
 
 ## 4- Planificación
+NO ES CALCAR LO QUE YO OS PONGO DE LAS FASES DE ENTREGA, ES LO QUE CREEIS TU Y LAS FASES QUE REALMENTE APLICARÍAS
 
 ![image](../img/gantt1.jpg)
 ![image](../img/gantt2.jpg)
