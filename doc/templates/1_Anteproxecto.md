@@ -25,7 +25,7 @@ O proxecto consiste na elaboración dunha páxina na que poidas buscar unha empr
 Os obxectivos principais serían poder ter unha única web onde as persoas poidan publicitar os servicios que ofrecen e os usuarios desta poidan contratar moitas clases de servicios nun mesmo lugar, conectando así aos profesionais (de agora en diante, os clientes) cos usuarios.
 
 Esta aplicación abre unha oportunidade de negocio, xa que este proxecto pode verse económicamente beneficiada mediante o uso da publicidade, ademáis de que os nosos clientes terían a oportunidade de pagar unha suscripción mensual onde se lle permita facer anuncios ilimitados, certa ventaxa nas búsquedas dos usuarios aparecendo dos primeiros nestas, e unha maior posibilidade de saír no apartado de "Destacados".
-
+> ESTO ABAJO. AQUÍ SOLO UN RESUMEN GENERAL. EJ. Emplearase html5, CSS3 e JavaScript para o frontend e PHP e MySQL para o backend.
 Tecnoloxías que serán utilizadas para a realización desta web:
 - **Linguaxes de programación**: HTML5, CSS3, JavaScript, PHP (MVC)
 - **Librerías**: JavaScript: AOS, Math.js 
