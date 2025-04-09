@@ -12,36 +12,31 @@
 
 ## 1- Descrición Xeral
 
->*EXPLICACION*: Descrición Xeral do proxecto
+ProHive é unha plataforma de búsqueda de empresas, autónomos ou asesores co fin de que te realicen un servicio/traballo. O fin deste sería que poidas encontrar á persoa ou grupo de persoas que poidan satisfacer as túas necesidades de forma rápida e sencilla, adaptándose a case calquera tipo de ámbito, posto que queremos contar traballadores da maioría de áreas (como son carpinteiros, pintores, arquitectos, programadores web, diseñadores gráficos, e todo o que se te poida ocurrir).
 
 ## 2- Funcionalidades
 
->*EXPLICACION* Describir que servizos ou operacións se van poder realizar por medio do noso proxecto, indicando que actores interveñen en cada caso.
->
-> Enumeradas, de maneira que na fase de deseño poidamos definir o diagrama ou configuración correspondente a cada funcionalidade.
-> Cada función ten uns datos de entrada e uns datos de saída. Entre os datos de entrada e de saída, realízase un proceso, que debe ser explicado.
-
-Exemplo:
-
 | Acción   |  Descrición        |
 |----------|--------------------|
-| Alta de productos   | Dar de alta os productos na base de datos|
-| Modificar productos | Modificación de productos na base de datos|
-| Presentación dos productos  | Mostra dos productos por medio da páxina web |
+| Alta de usuarios | Dar de alta aos usuarios na base de datos mediante un formulario cos seguintes datos: nombre, apellidos, email, contraseña (cun campo de confirmar contraseña á hora de rexistrar ao usuario) |
+| Modificar usuarios | Modificación de usuarios na base de datos|
+| Alta de empresas | Dar de alta ás empresas/autónomos/asesores na base de datos mediante un formulario. Este formulario contaría cos seguintes datos: nome, propietario, localización. |
+| Modificar empresas | Modificación de empresas/autónomos/asesores na base de datos|
+| Alta de servizos | Dar de alta aos servizos que as empresas ofrecen na base de datos. Esto sería mediante os seguintes datos: título, descripción, prezo, imaxe, id_empresa |
+| Mostrar servizos | Mostra os servizos na páxina principal. |
+| Mostrar perfil de empresa | Mostra o perfil da empresa seleccionada. |
+| Mostrar perfil de usuario | Mostra o teu perfil de usuario (os usuarios soamente poden ver o seu propio perfil, debido a que non aporta nada ver o perfil doutro usuario). |
 
 ## 3- Tipos de usuarios
 
-> *EXPLICACION* Describir os tipos de usuario que poderán acceder ao noso sistema. Habitualmente os tipos de usuario veñen definidos polas funcionalidades ás cales teñen acceso. En termos xerais existen moitos grupos de usuarios: anónimos, novos, rexistrados, bloqueados, confirmados, verificados, administradores, etc.
->
-> Exemplo:
->
-> - Usuario xenérico, que terá acceso a ...
-> - Usuario técnico, que poderá...
+- Usuario cliente: sería o propietario dalgunha/s empresa/s, o cal sería o encargado de realizar os anuncios de servizos e algunha sección máis na/s súa/s empresa/s.
+- Usuario común: terá acceso ao seu perfil e aos anuncios das empresas da páxina. Poderá contactar con elas.
+- Usuario anónimo: soamente terá acceso aos anuncios das empresas da páxina. Non poderá contactar con elas.
+- Usuario administrador: sería o administrador da plataforma. Encargaríase de administrar aos usuarios e empresas. Terá total acceso á plataforma.
 
 ## 4- Contorno operacional
 
-> *EXPLICACION* Neste apartado deben describirse os recursos necesarios, dende o punto de vista do usuario, para poder operar coa aplicación web. Habitualmente consiste nun navegador web actualizado e unha conexión a internet.
-Se é necesario algún hardware ou software adicional, deberá indicarse.
+Para o uso da páxina web, soamente fará falta un dispositivo de calquera tipo con conexión a internet e un navegador web.
 
 ## 5- Normativa
 

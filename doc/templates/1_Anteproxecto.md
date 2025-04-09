@@ -84,7 +84,11 @@ A aplicación estará dirixida a:
 
 ### 2.6- Forma xurídica
 
-> _EXPLICACIÓN_: Neste apartado deberedes indicar a forma xurídica: autónomo, soc. Cooperativa, SL,.. Explicando (nun par de frases) por que escolledes esta forma
+Tendo en conta que o desarrollo da páxina está creado por unha soa persoa, o que mellor se adapta sería ser autónomo.
+
+Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén sería por dúas principais ventaxas: 
+1. Non tería que aportar capital inicial.
+2. Existencia de axudas para autónomos.
 
 ### 2.7- Investimentos
 
