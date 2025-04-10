@@ -72,6 +72,11 @@ A aplicación estará dirixida a:
 ### 2.4- Competencia
 
 > _EXPLICACIÓN_: Neste apartado deberase indicar que outras empresas operan no mercado. Que cota de mercado teñen e como están posicionadas. Existencia de productos/servizos substitutivos. Como están posicionados.
+As empresas que compiten no mercado serían as seguintes:
+- **Fiverr**: plataforma na cal unha persoa pode ofrecer un servicio, sendo o máis parecido a ProHive, sen embargo, este está máis que nada dirixido ao apartado tecnolóxico, sendo unha plataforma coñecida por ser un lugar idóneo para buscar persoas para que fagan partes de videoxogos (música, diseño gráfico, modelaxe 3D...).
+- **Upwork y Freelancer.com**: plataformas nas cales podes contratar a freelancers de gran parte de ámbitos. A gran diferencia entre estas dúas plataformas e ProHive sería que tanto Upwork como Freelancer.com son dirixidas a servicios a realizar a distancia (como é o diseño dunha páxina web, diseño gráfico, marketing...).
+
+Esas tres plataformas son as mellor posicionadas neste mercado.
 
 ### 2.5- Proposta de valor
 
