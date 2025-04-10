@@ -14,6 +14,8 @@
 
 ProHive é unha plataforma de búsqueda de empresas, autónomos ou asesores co fin de que te realicen un servicio/traballo. O fin deste sería que poidas encontrar á persoa ou grupo de persoas que poidan satisfacer as túas necesidades de forma rápida e sencilla, adaptándose a case calquera tipo de ámbito, posto que queremos contar traballadores da maioría de áreas (como son carpinteiros, pintores, arquitectos, programadores web, diseñadores gráficos, e todo o que se te poida ocurrir).
 
+![image](../img/logotipo.jpg)
+
 ## 2- Funcionalidades
 
 | Acción   |  Descrición        |
@@ -54,6 +56,6 @@ Para o uso da páxina web, soamente fará falta un dispositivo de calquera tipo 
 
 ## 6- Melloras futuras
 
-> *EXPLICACION* É posible que o noso proxecto se centre en resolver un problema concreto que se poderá ampliar no futuro con novas funcionalidades, novas interfaces, etc.
+Nun futuro estaría a idea de realizar unha aplicación para Android e iOS, facendo que sexa máis rápido o acceso á aplicación.
 
 [**<-Anterior**](../../README.md)
