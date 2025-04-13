@@ -126,9 +126,20 @@ As formas que ProHive terá de xerar ingresos serán as seguintes:
 - Donacións: Aceptamos donacións.
 
 Por aquí temos as tablas de prezos das suscripcións e publicidades:
-| **Suscripcións** |
-| **Mensual** | **Anual** |
-| XXX€ | XXXX€ |
+
+<table>
+  <tr>
+    <td rowspan="2"><b>Suscripcións</b>></td>
+  </tr>
+  <tr>
+    <td><b>Mensual</b></td>
+    <td><b>Anual</b></td>
+  </tr>
+  <tr>
+    <td><b>XXX€</b></td>
+    <td><b>XXXX€</b></td>
+  </tr>
+</table>
 
 | **Publicidade** |
 | **Mensual** | **Anual** |
