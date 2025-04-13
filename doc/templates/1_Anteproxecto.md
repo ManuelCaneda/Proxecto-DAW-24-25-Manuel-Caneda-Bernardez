@@ -25,14 +25,6 @@ O proxecto consiste na elaboración dunha páxina na que poidas buscar unha empr
 Os obxectivos principais serían poder ter unha única web onde as persoas poidan publicitar os servicios que ofrecen e os usuarios desta poidan contratar moitas clases de servicios nun mesmo lugar, conectando así aos profesionais (de agora en diante, os clientes) cos usuarios.
 
 Esta aplicación abre unha oportunidade de negocio, xa que este proxecto pode verse económicamente beneficiada mediante o uso da publicidade, ademáis de que os nosos clientes terían a oportunidade de pagar unha suscripción mensual onde se lle permita facer anuncios ilimitados, certa ventaxa nas búsquedas dos usuarios aparecendo dos primeiros nestas, e unha maior posibilidade de saír no apartado de "Destacados".
-> ESTO ABAJO. AQUÍ SOLO UN RESUMEN GENERAL. EJ. Emplearase html5, CSS3 e JavaScript para o frontend e PHP e MySQL para o backend.
-Tecnoloxías que serán utilizadas para a realización desta web:
-- **Linguaxes de programación**: HTML5, CSS3, JavaScript, PHP (MVC)
-- **Librerías**: JavaScript: AOS, Math.js 
-- **Prototipo**: Figma
-- **Comunicación asíncrona**: AJAX
-- **Bases de Datos**: MySQL - phpMyAdmin
-- **API Rest**: PHP
 
 ## 2- Empresa
 
@@ -66,7 +58,6 @@ DAFO:
 
 A aplicación estará dirixida a:
 - Empresas, autónomos e asesores de todo tipo (clientes): estos poderán publicitar os seus servicios, publicando datos de contacto para que as persoas que queiran contratalos poidan contactar con eles. Poderán anunciar 3 servicios mensuais en caso de utilizar o plan gratuito da web. En caso de pagar pola suscripción mensual, poderán anunciar servicios infinitos, ademáis de que terán unha maior subida das ventas debido a que aparecerán dos primeiros nas búsquedas dos usuarios e terán máis posibilidades de sair no apartado de "Destacados".
-
 - Persoas interesadas en contratar un servicio (usuarios): Poderán acceder á páxina para contratar a calquera dos nosos clientes.
 
 ### 2.4- Competencia
@@ -97,18 +88,51 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 
 ### 2.7- Investimentos
 
-> _EXPLICACIÓN_: Neste apartado idicaremos o investimentos, aínda que sexa, só unha enumeración de todo o que necesitan (locais, infraestruturas, equipos, suministros, mobiliario...) cuantificando cada elemento.
-
 #### 2.7.1- Custos
 
-> > _EXPLICACIÓN_: Neste apartado idicaremos o invertimento
->
-> - Diferenzando custos fixos de variables.
-> - Computando impostos e custos sociais.
+- Fixos:
+
+| Gasto | Cantidade |
+|----------|--------------------|
+| Equipamento informático | (1000€ portátil, 75€ segunda pantalla, 24€ teclado, 20€ ratón) |
+| Mobles | 500€ (mesa + silla) |
+| Internet | XXX€/ano |
+| Luz, auga e calefacción | XXX€/ano |
+| Licencia de software (Adobe Creative Cloud) | 362,75€/ano |
+| Dominio | XXX€/ano |
+
+- Variables:
+
+| **Gasto** | **Cantidade** | **Notas** |
+|----------|--------------------|----------------------|
+| Hosting | XXX€/ano | Dependendo do éxito da plataforma, habería que ir ampliando o servicio de hosting |
+| Salario | 16.576/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario |
+| Cuota da Seguridade Social (mínima) | 960€/ano | Ao igual que o salario, podería plantearse a subida da cuota dependendo dos ingresos |
+| Márketing | XXX€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
+
+- Total:
+
+| **Fixos** | **Variables** | **Total** |
+|-------|-----------|-------|
+| XXXXX€ | XXXXX€ | XXXXX€ |
 
 #### 2.7.2- Ingresos
 
 > _EXPLICACIÓN_: Neste apartado indicarase unha previsión de ventas e unha política de prezos. Isto implicar apuntar unha previsión de ventas e unha política de prezos.
+As formas que ProHive terá de xerar ingresos serán as seguintes:
+- Comisión por ventas: ProHive obterá un 10% como comisión en cada un dos pagos que os usuarios realizarán aos profesionais da páxina.
+- Publicidade: Calquera evento/organización/anuncio de turismo terá a posibilidade de publicitarse na páxina (a forma de banner ou fotos) a cambio dun custo anual ou mensual.
+- Suscripción: Os profesionais que queiran formar parte dos negocios adheridos a ProHive terán a posibilidade de pagar unha suscripción para liberarse da comisión á plataforma.
+- Donacións: Aceptamos donacións.
+
+Por aquí temos as tablas de prezos das suscripcións e publicidades:
+|---------| **Suscripcións** |
+| **Mensual** | **Anual** |
+| XXX€ | XXXX€ |
+
+|---------| **Publicidade** |
+| **Mensual** | **Anual** |
+| 100€ | 1000€ |
 
 ### 2.8- Viabilidade
 
@@ -134,8 +158,9 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 
 - **Infraestructura**: XAMPP.
 - **Backend**: PHP, MySQL - phpMyAdmin, API Rest con PHP.
-- **Frontend:** HTML5, CSS3, JavaScript, AJAX, Figma
-- **Librerías**: JavaScript: AOS, Math.j.
+- **Frontend:** HTML5, CSS3, JavaScript, AJAX
+- **Prototipo**: Figma
+- **Librerías**: JavaScript: AOS, Math.js
 
 ## 4- Planificación
 NO ES CALCAR LO QUE YO OS PONGO DE LAS FASES DE ENTREGA, ES LO QUE CREEIS TU Y LAS FASES QUE REALMENTE APLICARÍAS
