@@ -129,7 +129,7 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
 
 <table>
   <tr>
-    <td rowspan="2"><b>Suscripcións</b>></td>
+    <td rowspan="2"><b>Suscripcións</b></td>
   </tr>
   <tr>
     <td><b>Mensual</b></td>
@@ -141,7 +141,8 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
   </tr>
 </table>
 
-| **Publicidade** |
+| **Publicidade** | **Publicidade** |
+|-------------|-----------|
 | **Mensual** | **Anual** |
 | 100€ | 1000€ |
 
