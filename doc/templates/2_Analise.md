@@ -56,6 +56,8 @@ Para o uso da páxina web, soamente fará falta un dispositivo de calquera tipo 
 
 ## 6- Melloras futuras
 
-Nun futuro estaría a idea de realizar unha aplicación para Android e iOS, facendo que sexa máis rápido o acceso á aplicación.
+Nun futuro estarían as seguintes ideas:
+- Realizar unha aplicación para Android e iOS, facendo que sexa máis rápido o acceso á aplicación.
+- Posibilidade de que un usuario poida subir unha foto de perfil ao seu perfil.
 
 [**<-Anterior**](../../README.md)
