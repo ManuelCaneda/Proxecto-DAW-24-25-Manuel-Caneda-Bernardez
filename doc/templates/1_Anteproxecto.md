@@ -112,7 +112,7 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 | **Gasto** | **Cantidade** | **Notas** |
 |-----------|---------------|-----------|
 | Hosting e Dominio | 119,4€/ano | Dependendo do éxito da plataforma, habería que ir ampliando o servicio de hosting |
-| Salario | 16.576€/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario |
+| Salario | 16.576€/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario (actualmente corresponde co SMI) |
 | Cuota da Seguridade Social (mínima) | 960€/ano | Ao igual que o salario, podería plantearse a subida da cuota dependendo dos ingresos |
 | Márketing | 1000€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
 
@@ -163,12 +163,6 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
 ### 2.8- Viabilidade
 
 #### 2.8.1- Viabilidade técnica
-
-> _EXPLICACIÓN_: Neste subapartado deberás defender tendo en conta os datos xa aportados, a viabilidade da realización do proyecto.
-> Evidentemente, para poder xustificar a viabilidade económica do proyecto deberás ter en conta os ingresos. **Ainda que está na parte de empresa, este apartado é interesante dende o punto de vista técnico**
->
-> - Será posible dispoñer dos recursos humanos e medios de produción necesarios (materias primas, maquinaria, instalacións, etc.)?
-> - Existe algún impedimento técnico que dificulte o proceso produtivo?
 
 Para utilizar esta plataforma non é necesaria unha instalación, posto que únicamente faría falta un dispositivo (independentemente de ser un ordenador, móvil, tablet ou incluso televisión) e unha conexión a internet. Por este motivo, non debería haber ningún impedimento, máis alá dalgún error que poida chegar a haber tras un mantemento ou actualización.
 
