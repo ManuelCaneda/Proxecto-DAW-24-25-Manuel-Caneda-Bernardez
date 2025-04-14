@@ -127,7 +127,7 @@ As formas que ProHive terá de xerar ingresos serán as seguintes:
 
 Por aquí temos as tablas de prezos das suscripcións e publicidades:
 
-<table>
+<table style="text-align:center">
   <tr>
     <td colspan="2"><b>Suscripcións</b></td>
   </tr>
