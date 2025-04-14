@@ -62,21 +62,28 @@ A aplicación estará dirixida a:
 
 ### 2.4- Competencia
 
-> _EXPLICACIÓN_: Neste apartado deberase indicar que outras empresas operan no mercado. Que cota de mercado teñen e como están posicionadas. Existencia de productos/servizos substitutivos. Como están posicionados.
 As empresas que compiten no mercado serían as seguintes:
 - **Fiverr**: plataforma na cal unha persoa pode ofrecer un servicio, sendo o máis parecido a ProHive, sen embargo, este está máis que nada dirixido ao apartado tecnolóxico, sendo unha plataforma coñecida por ser un lugar idóneo para buscar persoas para que fagan partes de videoxogos (música, diseño gráfico, modelaxe 3D...).
 - **Upwork y Freelancer.com**: plataformas nas cales podes contratar a freelancers de gran parte de ámbitos. A gran diferencia entre estas dúas plataformas e ProHive sería que tanto Upwork como Freelancer.com son dirixidas a servicios a realizar a distancia (como é o diseño dunha páxina web, diseño gráfico, marketing...).
 
 Esas tres plataformas son as mellor posicionadas neste mercado.
 
+Debido a que non hai aplicacións que abarquen a tal rango de clientes, podemos considerar que temos unha enorme oportunidade de mercado.
+
 ### 2.5- Proposta de valor
 
-> _EXPLICACIÓN_: **Apartado fundamental.**
->
-> - En que se diferencia fronte os competidores.
-> - Que melloras terá fronte os competidores.
-> - Que valor aporta ao mercado.
-> - ¿Porqué mercarán/contratarán este producto/servizo/idea fronte o resto?
+- Diferenzas fronte á competencia:
+Dámoslle importancia a calquera tipo de profesional independentemente do ámbito ao que se dedique. Desta forma podemos decir que buscamos que os nosos clientes poidan obter maiores ingresos ao poder publicar os seus servizos na nosa plataforma, e á súa vez buscamos que os usuarios poidan buscar calquera tipo de profesional de forma sencilla e rápida.
+
+- Melloras frente á competencia:
+Centralización de tódolos ámbitos nunha única plataforma.
+
+- Valor que aportamos ao mercado:
+Mellora na economía e popularización dos nosos clientes. Mellor experiencia do usuario.
+
+- Razóns para elixir este produto:
+Maior obtención de ingresos para os nosos clientes.
+Optimización de tempo e esforzo para os nosos usuarios.
 
 ### 2.6- Forma xurídica
 
@@ -94,31 +101,29 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 
 | Gasto | Cantidade |
 |----------|--------------------|
-| Equipamento informático | (1000€ portátil, 75€ segunda pantalla, 24€ teclado, 20€ ratón) |
+| Equipamento informático | 1119€ (1000€ portátil, 75€ segunda pantalla, 24€ teclado, 20€ ratón) |
 | Mobles | 500€ (mesa + silla) |
-| Internet | XXX€/ano |
-| Luz, auga e calefacción | XXX€/ano |
+| Internet | 35.5€/ano |
+| Luz, auga e calefacción | ~720€/ano |
 | Licencia de software (Adobe Creative Cloud) | 362,75€/ano |
-| Dominio | XXX€/ano |
 
 - Variables:
 
 | **Gasto** | **Cantidade** | **Notas** |
-|----------|--------------------|----------------------|
-| Hosting | XXX€/ano | Dependendo do éxito da plataforma, habería que ir ampliando o servicio de hosting |
-| Salario | 16.576/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario |
+|-----------|---------------|-----------|
+| Hosting e Dominio | 119,4€/ano | Dependendo do éxito da plataforma, habería que ir ampliando o servicio de hosting |
+| Salario | 16.576€/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario |
 | Cuota da Seguridade Social (mínima) | 960€/ano | Ao igual que o salario, podería plantearse a subida da cuota dependendo dos ingresos |
-| Márketing | XXX€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
+| Márketing | 1000€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
 
 - Total:
 
 | **Fixos** | **Variables** | **Total** |
-|-------|-----------|-------|
-| XXXXX€ | XXXXX€ | XXXXX€ |
+|-----------|---------------|-----------|
+| 2.737,25€ | 18655.4€ | 21.392,66€ |
 
 #### 2.7.2- Ingresos
 
-> _EXPLICACIÓN_: Neste apartado indicarase unha previsión de ventas e unha política de prezos. Isto implicar apuntar unha previsión de ventas e unha política de prezos.
 As formas que ProHive terá de xerar ingresos serán as seguintes:
 - Comisión por ventas: ProHive obterá un 10% como comisión en cada un dos pagos que os usuarios realizarán aos profesionais da páxina.
 - Publicidade: Calquera evento/organización/anuncio de turismo terá a posibilidade de publicitarse na páxina (a forma de banner ou fotos) a cambio dun custo anual ou mensual.
@@ -127,7 +132,7 @@ As formas que ProHive terá de xerar ingresos serán as seguintes:
 
 Por aquí temos as tablas de prezos das suscripcións e publicidades:
 
-<table style="text-align:center">
+<table>
   <tr>
     <td colspan="2"><b>Suscripcións</b></td>
   </tr>
@@ -136,15 +141,24 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
     <td><b>Anual</b></td>
   </tr>
   <tr>
-    <td><b>XXX€</b></td>
-    <td><b>XXXX€</b></td>
+    <td><b>99.99€</b></td>
+    <td><b>9.99€</b></td>
   </tr>
 </table>
 
-| **Publicidade** | **Publicidade** |
-|-------------|-----------|
-| **Mensual** | **Anual** |
-| 100€ | 1000€ |
+<table>
+  <tr>
+    <td colspan="2"><b>Publicidade</b></td>
+  </tr>
+  <tr>
+    <td><b>Mensual</b></td>
+    <td><b>Anual</b></td>
+  </tr>
+  <tr>
+    <td><b>300€</b></td>
+    <td><b>1500€</b></td>
+  </tr>
+</table>
 
 ### 2.8- Viabilidade
 
@@ -155,6 +169,8 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
 >
 > - Será posible dispoñer dos recursos humanos e medios de produción necesarios (materias primas, maquinaria, instalacións, etc.)?
 > - Existe algún impedimento técnico que dificulte o proceso produtivo?
+
+Para utilizar esta plataforma non é necesaria unha instalación, posto que únicamente faría falta un dispositivo (independentemente de ser un ordenador, móvil, tablet ou incluso televisión) e unha conexión a internet. Por este motivo, non debería haber ningún impedimento, máis alá dalgún error que poida chegar a haber tras un mantemento ou actualización.
 
 #### 2.8.2 - Viabilidade económica
 
