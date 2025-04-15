@@ -8,8 +8,6 @@
   - [5- Normativa](#5--normativa)
   - [6- Melloras futuras](#6--melloras-futuras)
 
-> *EXPLICACION*: Este documento describe os requirimentos para "nome do proxecto" especificando que funcionalidade ofrecerá e de que xeito.
-
 ## 1- Descrición Xeral
 
 ProHive é unha plataforma de búsqueda de empresas, autónomos ou asesores co fin de que te realicen un servicio/traballo. O fin deste sería que poidas encontrar á persoa ou grupo de persoas que poidan satisfacer as túas necesidades de forma rápida e sencilla, adaptándose a case calquera tipo de ámbito, posto que queremos contar traballadores da maioría de áreas (como son carpinteiros, pintores, arquitectos, programadores web, diseñadores gráficos, e todo o que se te poida ocurrir).

@@ -155,10 +155,57 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
     <td><b>Anual</b></td>
   </tr>
   <tr>
-    <td><b>300€</b></td>
-    <td><b>1500€</b></td>
+    <td><b>99.99€</b></td>
+    <td><b>749.99€</b></td>
   </tr>
 </table>
+
+- Previsión de ventas:
+Según datos de la INE, [en España en 2022 operaron 3.487.503 de empresas](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736161927&menu=ultiDatos&idp=1254735576550). Teniendo en cuenta que el crecimiento en número de empresas ese año fue de +1.726 empresas, podemos obtener que el número de empresas actual aproximado en españa es de alrededor de 3.490.000 empresas. A esto hay que sumarle un aproximado de tres millones de autónomos que podría haber este año ([en 2020 habían 2.997.941](https://www.ine.es/prensa/experimental_codem.pdf), según la INE). De esta forma, tenemos un total aproximado de 6.487.503.
+
+Teniendo en cuenta esta estadística:
+
+- **Primer año**:
+Como es nuestro primer año, contaremos con que un 0.5% del total formen parte de nuestra plataforma, es decir, unos 32.437 clientes.
+
+Dentro de estos 32.347 clientes, contaremos con que unos 500 paguen la suscripción a lo largo del año o varios meses. De esta forma, contaremos con que recibiremos una media de 50€ a lo largo del año por parte de cada empresa. Esta media la aproximamos basándonos en que muchos clientes pagarán la suscripción anual, y otros tantos pagarán la mensual una cantidad indefinida de veces, por lo que tomaremos esa media.
+
+De esta forma, podremos aproximar unos **25.000€** de beneficio por parte de las suscripciones.
+
+Con los 31.847 clientes restantes, contaremos con que un cuarto de ellos realizarán ventas a través de la página, dándonos unos 7.961 clientes.
+
+Contaremos con que cada venta tenga un precio medio de 10€. Hay que tener en cuenta que, debido a que utilizamos Stripe como aplicación de pagos de terceros y que este se queda con un 1.25%+0.25€ como comisión en cada venta, nos queda que Stripe se lleva con 0.26€.
+
+Recordemos que ProHive realiza una comisión del 10% de cada venta, dándonos 0.97€ por cada venta. De esta forma, para el cliente quedarían 8.77€.
+
+A su vez, también aproximaremos que, de media, cada empresa que realice ventas, realizará 2 ventas durante este año. Por ende, recibiremos 2€ al año por parte de cada uno de los 7.961 clientes durante este año: un total de **15.444€**.
+
+Para terminar, contemos con que habrán 10 pagos por publicidad anuales y un total de 50 pagos mensuales por publicidad: 
+7.499,9€ + 4.999,5€ = **12.499,4€** por publicidad a lo largo del año.
+
+No contaremos con donaciones a lo largo del año.
+
+> **Total: 52.943,4€**
+
+- **Segundo año**:
+En nuestro segundo año prevemos contar con unos 50.000 clientes.
+
+Dentro de estos 50.000 clientes, contaremos con que unos 700 paguen suscripción a lo largo del año o varios meses. Seguiremos usando los 50€ como referencia a lo largo del año por parte de cada empresa.
+
+De esta forma, podremos aproximar unos **35.000€** de beneficio por parte de las suscripciones.
+
+Con los 43.000 clientes restantes, contaremos con que unos 9.000 de ellos realizarán ventas a través de la página.
+
+Seguiremos con que cada venta tenga un precio medio de 10€. Por lo que Stripe seguiría llevándose con 0.26€, ProHive 0.97€, y el cliente 8.77€.
+
+Esta vez aproximaremos que, de media, cada empresa que realice ventas, realizará unas 4 ventas durante este año. Por ende, recibiremos 3,88€ al año por parte de cada uno de los clientes: un total de **34.920€**.
+
+Para terminar, contemos con que habrán 15 pagos por publicidad anuales y un total de 65 pagos mensuales por publicidad: 
+1.249,85€ + 6.499,5€ = **17.749,35€** por publicidad a lo largo del año.
+
+Contaremos con unos **500€** de donaciones a lo largo del año.
+
+> **Total: 88.169,35€**
 
 ### 2.8- Viabilidade
 
