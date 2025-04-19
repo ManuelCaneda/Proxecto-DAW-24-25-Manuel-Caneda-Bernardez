@@ -101,7 +101,7 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 
 | Gasto | Cantidade |
 |----------|--------------------|
-| Equipamento informático | 1119€ (1000€ portátil, 75€ segunda pantalla, 24€ teclado, 20€ ratón) |
+| Equipamento informático | 1119€ (1000€ portátil, 150€ segunda pantalla, 24€ teclado, 20€ ratón) |
 | Mobles | 500€ (mesa + silla) |
 | Internet | 35.5€/ano |
 | Luz, auga e calefacción | ~720€/ano |
@@ -114,13 +114,13 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 | Hosting e Dominio | 119,4€/ano | Dependendo do éxito da plataforma, habería que ir ampliando o servicio de hosting |
 | Salario | 16.576€/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario (actualmente corresponde co SMI) |
 | Cuota da Seguridade Social (mínima) | 960€/ano | Ao igual que o salario, podería plantearse a subida da cuota dependendo dos ingresos |
-| Márketing | 1000€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
+| Márketing | 3000€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
 
 - Total:
 
 | **Fixos** | **Variables** | **Total** |
 |-----------|---------------|-----------|
-| 2.737,25€ | 18655.4€ | 21.392,66€ |
+| 2.812,25€ | 20.655,40€ | 23.467,65€ |
 
 #### 2.7.2- Ingresos
 
@@ -166,26 +166,26 @@ Según datos de la INE, [en España en 2022 operaron 3.487.503 de empresas](http
 Teniendo en cuenta esta estadística:
 
 - **Primer año**:
-Como es nuestro primer año, contaremos con que un 0.5% del total formen parte de nuestra plataforma, es decir, unos 32.437 clientes.
+Como es nuestro primer año, contaremos con que un 0.3% del total formen parte de nuestra plataforma, es decir, unos 19.462 clientes.
 
-Dentro de estos 32.347 clientes, contaremos con que unos 500 paguen la suscripción a lo largo del año o varios meses. De esta forma, contaremos con que recibiremos una media de 50€ a lo largo del año por parte de cada empresa. Esta media la aproximamos basándonos en que muchos clientes pagarán la suscripción anual, y otros tantos pagarán la mensual una cantidad indefinida de veces, por lo que tomaremos esa media.
+Dentro de estos 19.462 clientes, contaremos con que unos 500 paguen la suscripción a lo largo del año o varios meses. De esta forma, contaremos con que recibiremos una media de 50€ a lo largo del año por parte de cada empresa. Esta media la aproximamos basándonos en que muchos clientes pagarán la suscripción anual, y otros tantos pagarán la mensual una cantidad indefinida de veces, por lo que tomaremos esa media.
 
 De esta forma, podremos aproximar unos **25.000€** de beneficio por parte de las suscripciones.
 
-Con los 31.847 clientes restantes, contaremos con que un cuarto de ellos realizarán ventas a través de la página, dándonos unos 7.961 clientes.
+Con los 18.962 clientes restantes, contaremos con que un cuarto de ellos realizarán ventas a través de la página, dándonos unos 4.740 clientes.
 
 Contaremos con que cada venta tenga un precio medio de 10€. Hay que tener en cuenta que, debido a que utilizamos Stripe como aplicación de pagos de terceros y que este se queda con un 1.25%+0.25€ como comisión en cada venta, nos queda que Stripe se lleva con 0.26€.
 
 Recordemos que ProHive realiza una comisión del 10% de cada venta, dándonos 0.97€ por cada venta. De esta forma, para el cliente quedarían 8.77€.
 
-A su vez, también aproximaremos que, de media, cada empresa que realice ventas, realizará 2 ventas durante este año. Por ende, recibiremos 2€ al año por parte de cada uno de los 7.961 clientes durante este año: un total de **15.444€**.
+A su vez, también aproximaremos que, de media, cada empresa que realice ventas, realizará 2 ventas durante este año. Por ende, recibiremos 2€ al año por parte de cada uno de los 4.740 clientes durante este año: un total de **9.481€**.
 
 Para terminar, contemos con que habrán 10 pagos por publicidad anuales y un total de 50 pagos mensuales por publicidad: 
 7.499,9€ + 4.999,5€ = **12.499,4€** por publicidad a lo largo del año.
 
 No contaremos con donaciones a lo largo del año.
 
-> **Total: 52.943,4€**
+> **Total: 46.980,4€**
 
 - **Segundo año**:
 En nuestro segundo año prevemos contar con unos 50.000 clientes.
@@ -215,13 +215,11 @@ Para utilizar esta plataforma non é necesaria unha instalación, posto que úni
 
 #### 2.8.2 - Viabilidade económica
 
-> _EXPLICACIÓN_: Neste subapartado deberás defender con datos a viabilidade da realización do proyecto, para elo debes indicar os custos e investimentos:
+Tras ver os datos sobre os ingresos e os gastos durante os dous primeiros anos, podemos concluir que é un proxecto viable económicamente.
 
 #### 2.8.3- Conclusión
 
-> - É viable?
-> - Os beneficios do proxecto son superiores aos costes?
-> - As perdas poden cubrirse vía financiamento (por parte da administración pública, con subvencións, etc)?
+Sería unha empresa viable prácticamente dende o principio, e contamos que pouco a pouco sexa máis e máis viable e nos de máis beneficios.
 
 ## 3- Requirimentos técnicos
 
@@ -232,7 +230,6 @@ Para utilizar esta plataforma non é necesaria unha instalación, posto que úni
 - **Librerías**: JavaScript: AOS, Math.js
 
 ## 4- Planificación
-NO ES CALCAR LO QUE YO OS PONGO DE LAS FASES DE ENTREGA, ES LO QUE CREEIS TU Y LAS FASES QUE REALMENTE APLICARÍAS
 
 ![image](../img/gantt1.jpg)
 ![image](../img/gantt2.jpg)

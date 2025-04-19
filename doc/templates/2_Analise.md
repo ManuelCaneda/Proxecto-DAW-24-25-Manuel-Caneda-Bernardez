@@ -40,17 +40,15 @@ Para o uso da páxina web, soamente fará falta un dispositivo de calquera tipo 
 
 ## 5- Normativa
 
-> *EXPLICACION* Investigarase que normativa vixente afecta ao desenvolvemento do proxecto e de que maneira. O proxecto debe adaptarse ás esixencias legais dos territorios onde vai operar.
-> 
-> Pola natureza dos sistema de información, unha lei que se vai a ter que mencionar de forma obrigatoria é la [Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673). O ámbito da LOPDPGDD é nacional. Se a aplicación está pensada para operar a nivel europeo, tamén se debe facer referencia á [General Data Protection Regulation (GDPR)](https://eur-lex.europa.eu/eli/reg/2016/679/oj). Na documentación debe afirmarse que o proxecto cumpre coa normativa vixente.
->
-> Para cumplir a LOPDPGDD e/ou GDPR debe ter un apartado na web onde se indique quen é a persoa responsable do tratamento dos datos e para que fins se van utilizar. Habitualmente esta información estructúrase nos seguintes apartados:
->
-> - Aviso legal.
-> - Política de privacidade.
-> - Política de cookies.
->
-> É acosenllable ver [exemplos de webs](https://www.spotify.com/es/legal/privacy-policy/) que conteñan textos legais referenciando a LOPDPGDD ou GDPR.
+A norma máis importante para o proxecto é a [Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673), debido ao manexo de información persoal dos usuarios e clientes. A plataforma cumplirá cos principios de tratamento de datos persoais establecidos. Os usuarios terán dereito ao acceso, rectificación e supresión dos seus datos, además de ter que dar un consentimento explícito para o tratamento dos seus datos.
+
+Debido a que o proxecto operará en liña, tamén entra a [Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico.](https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758), que regula as actividades comerciais e os servizos dixitais en España.
+
+A plataforma cumplirá cos requisitos de información e transparecencia, como a identificación do responsable do tratamento, os datos de contacto, a finalidade do tratamento e os dereitos dos usuarios. 
+
+Para o uso de cookies, o usuario será informado sobre o seu uso e deberemos obter o seu consentimento.
+
+E por último, debido aos pagos online, debemos mencionar a [Ley 16/2009, de 13 de noviembre, de servicios de pago](https://www.boe.es/buscar/act.php?id=BOE-A-2009-18118).
 
 ## 6- Melloras futuras
 
