@@ -23,9 +23,13 @@
 - **Modelo relacional**
 
 **Usuarios** (id_usuario (PK),nombre,apellidos,email,password,tipo_usuario (FK de TipoUsuario))
+
 **TipoUsuario** (id (PK), tipo_nombre)
+
 **Anuncios** (id_anuncio (PK), id_cliente (FK de Usuarios), imagen, nombre, texto, precio)
+
 **Mensajes** (id_mensaje (PK), id_emisor (FK de Usuarios), id_receptor (FK de Usuarios), fecha, hora, texto)
+
 **Valoraciones** (id_valoracion (PK), id_anuncio (FK de Anuncios), id_usuario (FK de Usuarios), puntuacion, texto)
 
 
