@@ -12,9 +12,7 @@
 
 ## 2- Casos de uso
 
-> *EXPLICACIÓN:* Facer os diagramas de casos de uso que representen como as persoas usuarias interaccionan co sistema.
->
->Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
+![image](../img/casos_de_uso.jpg)
 
 ## 3- Diagrama de Base de Datos
 
