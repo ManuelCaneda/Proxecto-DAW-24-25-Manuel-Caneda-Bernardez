@@ -31,7 +31,7 @@ ProHive é unha plataforma de búsqueda de empresas, autónomos ou asesores co f
 
 - Usuario cliente: sería o propietario dalgunha/s empresa/s, o cal sería o encargado de realizar os anuncios de servizos e algunha sección máis na/s súa/s empresa/s.
 - Usuario común: terá acceso ao seu perfil e aos anuncios das empresas da páxina. Poderá contactar con elas.
-- Usuario anónimo: soamente terá acceso aos anuncios das empresas da páxina. Non poderá contactar con elas.
+- Usuario anónimo: soamente poderá darse de alta.
 - Usuario administrador: sería o administrador da plataforma. Encargaríase de administrar aos usuarios e empresas. Terá total acceso á plataforma.
 
 ## 4- Contorno operacional
