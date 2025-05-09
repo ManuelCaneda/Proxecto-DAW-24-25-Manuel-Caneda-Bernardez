@@ -6,8 +6,6 @@
   - [3- Innovación](#3--innovación)
   - [4- Probas](#4--probas)
 
-> Este documento explica como se debe realizar a fase de codificación e probas.
-
 ## 1- Codificación
 
 > Crea unha carpeta no teu repositorio e sube o código frecuentemente.
@@ -30,9 +28,12 @@
 > **Comparte o prototipo cos profesores por medio de Figma ou descarga o arquivo local o cal subirás o teu repositorio de GitHub**.
 > **Este prototipos deberían estar listo e enviados o titor para revisalo na primeira semana desta fase.**
 
+Puedes ver el prototipo haciendo click [aquí](https://www.figma.com/design/YkZ0R1c2W19m5aeZLIEK6e/ProHive?node-id=75-685)
+
 ## 3- Innovación
 
-No caso de utilizar tecnoloxías diferentes ás estudadas no ciclo formativo, fai unha descrición dos retos asumidos e como se resolveron.
+- Emprego a librería AOS, a cal non ten unha maior complicación que colocar unha clase concreta aos elementos que necesite que sexa afectado, polo que me funcionou á primeira.
+- Tamén emprego a librería 'vlucas/phpdotenv', de PHP, a cal foi un auténtico reto que funcionase, debido a que a ruta do archivo daba problemas á hora de intentar obter o seu contido, tanto na api como no MVC. A solución foi a base de proba a error.
 
 ## 4- Probas
 
