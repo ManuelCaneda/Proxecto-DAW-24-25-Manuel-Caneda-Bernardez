@@ -18,7 +18,7 @@
 
 - **Modelo Entidade/relación**
 
-![image](../img/bbdd_esquema.jpg)
+![image](../img/bbdd_eer.jpg)
 
 - **Modelo relacional**
 
