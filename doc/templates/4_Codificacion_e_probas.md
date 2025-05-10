@@ -8,9 +8,7 @@
 
 ## 1- Codificación
 
-> Crea unha carpeta no teu repositorio e sube o código frecuentemente.
->
-> Mentres se vai codificando a aplicación, iranse atopando problemas e haberá que ir modificando aspectos do deseño. Estes cambios tamén se deben recoller na documentación.
+[Directorio do código](../../codigo)
 
 ## 2- Prototipos
 
@@ -23,6 +21,9 @@ Podes ver o prototipo facendo click [aquí](https://www.figma.com/design/YkZ0R1c
 
 ## 4- Probas
 
-Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
+- Varios problemas que tiven foron coa creación da api, posto que ao principio non era capaz de devolver un JSON o cal tivese algún texto con til, pero despois de moitas probas, tiven que recurrir a facer unha función que sanitice os textos mediante a codificación UTF-8, xa que por algún motivo nin sequera funcionaba nin cun head con html.
+
+- Outros problemas que tiven foi á hora de crear os chats, xa que á hora de facer que os mensaxes tivesen scroll propio, non era capaz de que o scroll aparecese na parte de abaixo dos mensaxes. A solución foi engadir a seguinte línea de código no JS: $mensajes.scrollTop = $mensajes.scrollHeight;
+
 
 [**<-Anterior**](../../README.md)
