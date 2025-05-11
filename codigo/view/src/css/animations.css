@@ -1,0 +1,11 @@
+@keyframes portada {
+    0% {
+        margin-bottom: 2.5rem;
+        opacity: 0;
+    }
+
+    100% {
+        margin-bottom: 0;
+        opacity: 1;
+    }
+}

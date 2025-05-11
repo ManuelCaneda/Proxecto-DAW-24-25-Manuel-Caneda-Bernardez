@@ -1,0 +1,884 @@
+@import "base.css";
+@import "variables.css";
+@import "animations.css";
+
+/*=============================================
+=            Estilos del header            =
+=============================================*/
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    z-index: 100;
+}
+
+.header__logo {
+    width: 14rem;
+    height: auto;
+}
+
+.header__nav ul {
+    display: flex;
+    gap: 0 2.5rem;
+    list-style-type: none;
+    color: var(--main-text-color);
+    font-size: 18px;
+    font-family: var(--main-font);
+}
+
+.header__nav li {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__nav_barra {
+    height: 2px;
+    background-color: white;
+    width: 0;
+    border-radius: 5px;
+    transition: width .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header__nav li:hover .header__nav_barra{
+    width: 100%;
+}
+
+.header__nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__loginBtn{
+    background-color: white;
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: var(--main-color);
+    border: 0;
+
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+/*=====  End of Estilos del header  ======*/
+
+/*=============================================
+=            Estilos del main            =
+=============================================*/
+
+.main {
+    flex:1;
+    height: 100%;
+}
+
+/*=============================================
+=            Estilos de la portada            =
+=============================================*/
+
+.portada {
+    background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726)), url("../assets/img/bg-saber-mas.jpg") no-repeat;
+    background-size: cover;
+
+    font-family: var(--main-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.portada__text{
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    width:40%;
+    max-height: 80%;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    border-radius: 25px;
+    animation: portada 1s ease-in-out;
+}
+
+.portada__text h2 {
+    text-transform: uppercase;
+}
+
+.portada__text p {
+    font-size: 20px;
+}
+
+/*=====  End of Estilos de la portada  ======*/
+
+
+/*=============================================
+=            Estilos sobre nosotros            =
+=============================================*/
+
+.nosotros {
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    flex:1;
+    padding: 5rem 1rem;
+}
+
+.nosotros__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    width: 50%;
+}
+
+.nosotros figure {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*=====  End of Estilos sobre nosotros  ======*/
+
+
+/*=============================================
+=            Estilos de las stats            =
+=============================================*/
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(11, 10, 31, 0.712), rgba(11, 10, 31, 0.726)), url("../assets/img/bg-saber-mas.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+}
+
+.stats h2 {
+    color:var(--main-text-color);
+}
+
+.stats__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 2.5% 5%;
+    gap: 2.5rem;
+
+    list-style-type: none;
+}
+
+.stats__list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: rgba(255, 208, 165, 0.75);
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, .25);
+}
+
+.stats__list figure {
+    width: 150px;
+    height: 150px;
+}
+
+.stats__list figure img {
+    object-fit: contain;
+    color:red;
+}
+
+
+/*=====  End of Estilos de las stats  ======*/
+
+/*=========================================================
+=            Estilos de formulario de contacto            =
+===========================================================*/
+
+.form-required {
+    color: red;
+}
+
+.contacto__body {
+    padding: 2.5rem 0;
+}
+
+.contacto__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 50%;
+}
+
+.contacto__form label {
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.contacto__form input {
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid var(--main-color);
+
+    padding: 0 .5rem;
+}
+
+.contacto__form textarea {
+    width: 100%;
+    height: 100px;
+    
+    padding: .5rem;
+
+    border: 1px solid var(--main-color);
+}
+
+/*======  End of Estilos de formulario de contacto  ======*/
+
+/*=====  End of Estilos del main  ======*/
+
+/*=============================================
+=            Estilos del footer            =
+=============================================*/
+
+.footer{
+    background-color: var(--secondary-color);
+
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer a {
+    color: var(--main-text-color);
+}
+
+.footer__datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=====  End of Estilos del footer  ======*/
+
+/*
+     _                 _       
+    | |               (_)      
+    | |     ___   __ _ _ _ __  
+    | |    / _ \ / _` | | '_ \ 
+    | |___| (_) | (_| | | | | |
+    |______\___/ \__, |_|_| |_|
+                __/ |        
+                |___/         
+*/
+
+/*=============================================
+=            Estilos del Login            =
+=============================================*/
+
+.login_body, .register_body {
+    background: url("../assets/img/bg_login.png") no-repeat;
+    background-size: cover;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_main, .register_main {
+    background-color: rgba(255, 255, 255,.9);
+    border-radius: 25px;
+    padding: 1rem;
+
+    width: 30%;
+}
+
+.login_title, .register_title {
+    font-weight: normal;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login_form, .register_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.login_form input, .register_form input {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.login_form p, .register_form p {
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+
+.login_form .btn, .register_form .btn {
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+}
+
+.register__linkto__login, .login__linkto__register{
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.register__linkto__login a, .login__linkto__register a {
+    color: var(--main-color);
+}
+
+.register_true, .register_false, .login_false{
+    font-size:12px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.register_true{
+    color: rgb(65, 135, 65);
+}
+
+.register_false, .login_false{
+    color:red;
+}
+
+/*=====  End of Estilos del Login  ======*/
+
+
+/*
+     _    _                      
+    | |  | |                     
+    | |__| | ___  _ __ ___   ___ 
+    |  __  |/ _ \| '_ ` _ \ / _ \
+    | |  | | (_) | | | | | |  __/
+    |_|  |_|\___/|_| |_| |_|\___|
+                              
+*/
+
+/*=============================================
+=            Estilos del home            =
+=============================================*/
+
+
+/*=============================================
+=            Estilos del header del home            =
+=============================================*/
+
+.header_home, .header_perfil {
+    position: static;
+}
+
+.header__buscador{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.header__buscador input, .header__buscador button {
+    padding: .5rem;
+    border: 0;
+    background-color: white;
+}
+
+.header__buscador input {
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid black;
+    width: 60%;
+}
+
+.header__buscador button {
+    border-radius: 0 10px 10px 0;
+}
+
+.header__opciones {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__opciones a {
+    text-decoration: none;
+    color: white;
+}
+
+/*=====  End of Estilos del header del home  ======*/
+
+/*=======================================================
+=            Estilos de la lista de anuncios            =
+=========================================================*/
+
+.anuncios_destacados {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/*=====  End of Estilos de la lista de anuncios  ======*/
+
+/*=============================================
+=            Estilos de las cards            =
+=============================================*/
+
+.card_anuncio{
+    background-color: var(--card-bgcolor);
+    max-width: 300px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
+
+.anuncio_img, .anuncio_img img {
+    width:100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.anuncio_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.anuncio_title{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.anuncio_owner{
+    font-size: 14px;
+    color: #8d8d8d;
+    font-weight: normal;
+}
+
+.anuncio_price {
+    font-size: 20px;
+    padding: .2rem;
+    background-color: var(--main-color);
+    text-align: center;
+    color:white;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anuncio_desc{
+    font-size: 14px;
+    text-align: center;
+}
+
+.anuncio_info, .anuncio_desc {
+    padding: 0 1rem;
+}
+
+.anuncio_btn {
+    align-self: center;
+}
+
+
+/*=====  End of Estilos de las cards  ======*/
+
+/*=====  End of Estilos del home  ======*/
+
+/*
+     _____           __ _ _ 
+    |  __ \         / _(_) |
+    | |__) |__ _ __| |_ _| |
+    |  ___/ _ \ '__|  _| | |
+    | |  |  __/ |  | | | | |
+    |_|   \___|_|  |_| |_|_|
+                                            
+*/
+
+
+/*=============================================
+=            Estilos del perfil            =
+=============================================*/
+
+.header_perfil {
+    justify-content: center;
+}
+
+/*=============================================
+=            Estilos del formulario            =
+=============================================*/
+
+.editar_perfil_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.editar_perfil_main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+
+    max-width: 40%;
+    width: 40%;
+}
+
+.editar_perfil_main form input {
+    border: 0;
+    width: 100%;
+    padding: .5rem;
+}
+
+.editar_perfil_main form p:not(.editar__btns){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.input_perfil {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    border: 1px solid var(--main-color);
+}
+
+.editar_campo_btn {
+    padding: 1rem;
+    border-left: 1px solid var(--main-color);
+    background-color: #D9D9D9;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.editar_campo_btn:hover {
+    background-color: #8d8d8d;
+}
+
+.editar__btns {
+    align-self: center;
+}
+
+/*=====  End of Estilos del formulario  ======*/
+
+/*=====  End of Estilos del perfil  ======*/
+
+/*
+
+   _____ _           _   
+  / ____| |         | |  
+ | |    | |__   __ _| |_ 
+ | |    | '_ \ / _` | __|
+ | |____| | | | (_| | |_ 
+  \_____|_| |_|\__,_|\__|
+                         
+                    
+
+*/
+
+/*=============================================
+=            Estilos del chat            =
+=============================================*/
+
+.main_chat {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    flex: 1;
+}
+
+.chats_disponibles {
+    grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chats_disponibles h1 {
+    padding: 1rem;
+}
+
+.chat_abierto {
+    grid-column: 2 / 3;
+    border-left: 1px solid var(--main-color);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    height: 100%;
+}
+
+.chat_noabierto_img {
+    filter: grayscale(100%);
+    width: 300px;
+    height: 300px;
+}
+
+.chat_noabierto_texto{
+    font-size: 48px;
+    color: #464646;
+}
+
+.chat_selected {
+    background-color: #D9D9D9;
+}
+
+.mensajes {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    height: calc(70vh - 1px);
+    overflow-y: auto; /* scroll vertical automático si es necesario */
+    scroll-behavior: smooth;
+}
+
+.mensaje-recibido {
+    background-color: #D9D9D9;
+    color: #464646;
+
+    align-self: flex-start;
+}
+
+.mensaje-enviado {
+    background-color: var(--secondary-color-light);
+    color: white;
+
+    align-self: flex-end;
+}
+
+.mensaje-enviado,
+.mensaje-recibido {
+    position: relative;
+    padding: .5rem;
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+.mensaje-enviado,
+.mensaje-recibido {
+    padding-right: 4vw;
+}
+
+.mensaje-enviado span,
+.mensaje-recibido span {
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
+    font-size: 10px;
+}
+
+.chat_nuevo_mensaje {
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 2vw;
+
+    border-top: 1px solid var(--main-color);
+}
+
+.nuevo_msg_input {
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #D9D9D9;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.chat_nuevo_mensaje textarea {
+    flex:1;
+    padding: .5rem;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+
+    font-family: var(--main-font);
+}
+
+.chat_nuevo_mensaje textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.mostrar {
+    justify-content: end;
+}
+
+.fecha-mensajes {
+    text-align: center;
+    color: #464646;
+    margin-bottom: 1rem;
+}
+
+/*========================================================
+=            Estilos de los chats disponibles            =
+==========================================================*/
+
+.lista_chats {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem;
+    border-bottom: 1px solid var(--main-color);
+    cursor: pointer;
+}
+
+.chat_selected {
+    background-color: #D9D9D9;
+}
+
+.chat_texto {
+    flex:1;
+    padding-left: 1rem;
+}
+
+.info_chat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat_nombre {
+    font-weight: bold;
+}
+
+.chat_img {
+    width: 50px;
+    height: 50px;
+}
+
+.chat_msg_hora {
+    font-size:12px;
+}
+
+/*=====  End of Estilos de los chats disponibles  ======*/
+
+/*=====  End of Estilos del chat  ======*/
+
+/*=============================================
+=            Estilos de Media Queries            =
+=============================================*/
+
+@media screen and (max-width:720px){
+    .header{
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    .header__nav, .header__nav ul li, .header__loginBtn{
+        position: absolute;
+        width: 0;
+        height: 0;
+        transform: translateY(-1000000000000px);
+    }
+}
+
+/*=====  End of Estilos de Media Queries  ======*/
+
+
+/*=============================================
+=            Estilos del loader            =
+=============================================*/
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    margin-bottom: 25%;
+    width: 60px;
+    aspect-ratio: 1;
+    color: #000;
+    border: 10px solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation: l6 2s infinite linear;
+    position: relative;
+  }
+  .loader:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    inset: auto calc(50% - 10px) 100%;
+    border-radius: 5px 5px 0 0;
+    background: 
+      linear-gradient(currentColor 0 0) top/100% 30%,
+      linear-gradient(currentColor 0 0) top/50% 100%;
+    background-repeat: no-repeat;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: -8px -10px auto;
+    height: 15px;
+    background: 
+      radial-gradient(farthest-side,currentColor 94%,#0000) left,
+      radial-gradient(farthest-side,currentColor 94%,#0000) right;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+  }
+  @keyframes l6 {
+    0%   {background: conic-gradient(#77a4bd 0     ,#0000 0)}
+    12.5%{background: conic-gradient(#77a4bd 45deg ,#0000 46deg)}
+    25%  {background: conic-gradient(#77a4bd 90deg ,#0000 91deg)}
+    37.5%{background: conic-gradient(#77a4bd 135deg,#0000 136deg)}
+    50%  {background: conic-gradient(#77a4bd 180deg,#0000 181deg)}
+    62.5%{background: conic-gradient(#77a4bd 225deg,#0000 226deg)}
+    75%  {background: conic-gradient(#77a4bd 270deg,#0000 271deg)}
+    87.5%{background: conic-gradient(#77a4bd 315deg,#0000 316deg)}
+    100% {background: conic-gradient(#77a4bd 360deg,#0000 360deg)}
+  }
+
+/*=====  End of Estilos del loader  ======*/

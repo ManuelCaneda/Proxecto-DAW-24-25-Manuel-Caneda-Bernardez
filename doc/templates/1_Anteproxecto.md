@@ -95,32 +95,35 @@ Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén 
 
 ### 2.7- Investimentos
 
+| Gasto | Cantidade |
+|----------|--------------------|
+| Equipamento informático | 1119€ (1000€ portátil, 150€ segunda pantalla, 24€ teclado, 20€ ratón) |
+| Mobles | 500€ (mesa + silla) |
+
 #### 2.7.1- Custos
 
 - Fixos:
 
 | Gasto | Cantidade |
 |----------|--------------------|
-| Equipamento informático | 1119€ (1000€ portátil, 150€ segunda pantalla, 24€ teclado, 20€ ratón) |
-| Mobles | 500€ (mesa + silla) |
 | Internet | 35.5€/ano |
 | Luz, auga e calefacción | ~720€/ano |
 | Licencia de software (Adobe Creative Cloud) | 362,75€/ano |
+| Cuota da Seguridade Social (mínima) | 960€/ano | Ao igual que o salario, podería plantearse a subida da cuota dependendo dos ingresos |
+| Márketing | 3000€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
+| Salario | 16.576€/ano |
 
 - Variables:
 
 | **Gasto** | **Cantidade** | **Notas** |
 |-----------|---------------|-----------|
 | Hosting e Dominio | 119,4€/ano | Dependendo do éxito da plataforma, habería que ir ampliando o servicio de hosting |
-| Salario | 16.576€/ano | Se os ingresos van aumentando notablemente, podería plantearse a subida de salario (actualmente corresponde co SMI) |
-| Cuota da Seguridade Social (mínima) | 960€/ano | Ao igual que o salario, podería plantearse a subida da cuota dependendo dos ingresos |
-| Márketing | 3000€/ano | Ao igual que o salario e a cuota da SS, podería plantearse a subida da inversión en márketing |
 
 - Total:
 
-| **Fixos** | **Variables** | **Total** |
-|-----------|---------------|-----------|
-| 2.812,25€ | 20.655,40€ | 23.467,65€ |
+| **Investimentos** | **Fixos** | **Variables** | **Total** |
+|-------------------|-----------|---------------|-----------|
+| 1619€ | 21.654,25€ | 119,4€ | 23.392,65€ |
 
 #### 2.7.2- Ingresos
 

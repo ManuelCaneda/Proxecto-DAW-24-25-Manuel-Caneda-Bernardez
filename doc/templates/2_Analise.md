@@ -31,7 +31,7 @@ ProHive é unha plataforma de búsqueda de empresas, autónomos ou asesores co f
 
 - Usuario cliente: sería o propietario dalgunha/s empresa/s, o cal sería o encargado de realizar os anuncios de servizos e algunha sección máis na/s súa/s empresa/s.
 - Usuario común: terá acceso ao seu perfil e aos anuncios das empresas da páxina. Poderá contactar con elas.
-- Usuario anónimo: soamente poderá darse de alta.
+- Usuario anónimo: soamente terá acceso á landing page, podendo darse de alta para acceder á propia páxina.
 - Usuario administrador: sería o administrador da plataforma. Encargaríase de administrar aos usuarios e empresas. Terá total acceso á plataforma.
 
 ## 4- Contorno operacional
@@ -48,7 +48,11 @@ A plataforma cumplirá cos requisitos de información e transparecencia, como a 
 
 Para o uso de cookies, o usuario será informado sobre o seu uso e deberemos obter o seu consentimento.
 
-E por último, debido aos pagos online, debemos mencionar a [Ley 16/2009, de 13 de noviembre, de servicios de pago](https://www.boe.es/buscar/act.php?id=BOE-A-2009-18118).
+E por último, debido aos pagos online, debemos mencionar a [Ley 16/2009, de 13 de noviembre, de servicios de pago](https://www.boe.es/buscar/act.php?id=BOE-A-2009-18118). Responsable do tratamento: Manuel Caneda Bernárdez.
+
+ProHive informa e garantiza aos usuarios que nunca venderá, arrendará, compartirá ou de algunha outra maneira distribuirá os seus datos a disposición de terceiras persoas e que sempre que fora a realizarse algún tipo de cesión de datos personais, de forma previa, solicitaríase o consentimiento expreso, informado, e inequívoco por parte dos titulares.
+
+En cumplimento da RGPD, os usuarios teñen dereito a revisar, anonimizar e/ou borrar, total ou parcialmente, os datos almacenados no sitio web enviando un correo eléctronico a info@prohive.com e solicitalo.
 
 ## 6- Melloras futuras
 

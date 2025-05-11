@@ -1,0 +1,10 @@
+:root {
+    --main-color:#007196;
+    --secondary-color:#d62a25;
+    --secondary-color-light:#ff7423;
+    --main-font:"Inter";
+    --main-text-color:#FFFFFF;
+    --card-bgcolor: #D9D9D9;
+
+    font-family: var(--main-font);
+}
