@@ -10,19 +10,21 @@ class Anuncio extends ModelObject{
     public $nombre;
     public $texto;
     public $precio;
+    public $estado;
 
-    function __construct($id_anuncio, $id_cliente, $imagen, $nombre, $texto, $precio) {
-        $this->id_anuncio = $id_anuncio;
+    function __construct($id_cliente, $imagen, $nombre, $texto, $precio, $estado, $id_anuncio=null) {
         $this->id_cliente = $id_cliente;
         $this->imagen = $imagen;
         $this->nombre = $nombre;
         $this->texto = $texto;
         $this->precio = $precio;
+        $this->estado = $estado;
+        $this->id_anuncio = $id_anuncio;
     }
 
     public static function fromJson($json):ModelObject{
         $data = json_decode($json);
-        return new Usuario($data->id, $data->nombre, $data->apellidos, $data->email, $data->pass, $data->tipo);
+        return new Anuncio($data->id_anuncio, $data->id_cliente, $data->imagen, $data->nombre, $data->texto, $data->precio);
     }
 
 
@@ -45,7 +47,7 @@ class AnuncioModel extends Model
             $statement = $pdo->query($sql);
             $resultado = array();
             foreach($statement as $b){
-                $anuncio = new Anuncio($b['id_anuncio'], $b['id_cliente'], $b['imagen'], $b['nombre'], $b['texto'], $b['precio']);
+                $anuncio = new Anuncio($b['id_cliente'], $b['imagen'], $b['nombre'], $b['texto'], $b['precio'], $b['estado'], $b['id_anuncio']);
                 $resultado[] = $anuncio;
             }
         } catch (PDOException $th) {
@@ -69,7 +71,7 @@ class AnuncioModel extends Model
             $statement->bindValue(1, $anuncioId, PDO::PARAM_INT);
             $statement->execute();
             if($b = $statement->fetch()){
-                $resultado = new Anuncio($b['id_anuncio'], $b['id_cliente'], $b['imagen'], $b['nombre'], $b['texto'], $b['precio']);
+                $resultado = new Anuncio($b['id_cliente'], $b['imagen'], $b['nombre'], $b['texto'], $b['precio'], $b['estado'], $b['id_anuncio']);
             }
             
         } catch (Throwable $th) {

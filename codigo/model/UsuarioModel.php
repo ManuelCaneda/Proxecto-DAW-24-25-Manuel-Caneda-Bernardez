@@ -7,12 +7,14 @@ class Usuario{
     public $aps;
     public $email;
     public $pass;
+    public $tipo;
 
-    public function __construct($nombre,$aps,$email,$pass,$id=null){
+    public function __construct($nombre,$aps,$email,$pass,$tipo,$id=null){
         $this->nombre = $nombre;
         $this->aps = $aps;
         $this->email = $email;
         $this->pass = $pass;
+        $this->tipo = $tipo;
         $this->id = $id;
     }
 
@@ -115,6 +117,26 @@ class Usuario{
 
         return $this;
     }
+
+    /**
+     * Get the value of tipo
+     */ 
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * Set the value of tipo
+     *
+     * @return  self
+     */ 
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+
+        return $this;
+    }
 }
 
 class UsuarioModel {
@@ -122,7 +144,7 @@ class UsuarioModel {
         $pass = sha1($pass);
         
         $pdo = BBDD::getConnection();
-        $sql = "SELECT id, nombre, apellidos, email, pass FROM usuarios
+        $sql = "SELECT id, nombre, apellidos, email, pass, tipo_usuario FROM usuarios
                 WHERE email = ? 
                 AND pass = ?";
 
@@ -136,7 +158,7 @@ class UsuarioModel {
             $statement->execute();
             
             if($row = $statement->fetch()){
-                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["id"]);
+                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["tipo_usuario"],$row["id"]);
             }
         } catch (PDOException $e) {
             error_log("Error al obtener el usuario: " . $e->getMessage());
@@ -150,7 +172,7 @@ class UsuarioModel {
 
     public function getById($id){
         $pdo = BBDD::getConnection();
-        $sql = "SELECT id, nombre, apellidos, email, pass FROM usuarios
+        $sql = "SELECT id, nombre, apellidos, email, pass, tipo_usuario FROM usuarios
                 WHERE id = ?";
 
         $user = null;
@@ -162,7 +184,7 @@ class UsuarioModel {
             $statement->execute();
             
             if($row = $statement->fetch()){
-                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["id"]);
+                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["tipo_usuario"], $row["id"]);
             }
         } catch (PDOException $e) {
             error_log("Error al obtener el usuario: " . $e->getMessage());

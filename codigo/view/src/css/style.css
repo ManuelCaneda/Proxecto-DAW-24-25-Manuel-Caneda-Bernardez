@@ -73,6 +73,7 @@
 .main {
     flex:1;
     height: 100%;
+    padding: 1rem;
 }
 
 /*=============================================
@@ -463,6 +464,7 @@
     justify-content: space-between;
     gap: .5rem;
     padding-bottom: 1rem;
+    aspect-ratio: 3 / 4; /* mantiene proporción dinámica, como 200x266 */
 }
 
 .anuncio_img, .anuncio_img img {
@@ -514,6 +516,66 @@
 .anuncio_btn {
     align-self: center;
 }
+
+
+/*========================================================
+=            Estilos de las cards de clientes            =
+==========================================================*/
+
+.anuncios_propios_title {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.anuncios_propios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.anuncio_estado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.anuncio_estado_texto {
+    font-size: 24px;
+}
+
+.anuncio_estado_icon {
+    width: 24px;
+    height: 24px;
+}
+
+.add_card {
+    border: 4px dashed gray;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s ease;
+}
+
+.add_card:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.add_card_icon {
+    width: 50px;
+    height: 50px;
+}
+
+/*=====  End of Estilos de las cards de clientes  ======*/
+
+
 
 
 /*=====  End of Estilos de las cards  ======*/

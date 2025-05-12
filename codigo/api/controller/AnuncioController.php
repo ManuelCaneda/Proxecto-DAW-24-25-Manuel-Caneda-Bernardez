@@ -11,7 +11,8 @@ function sanitizeAnuncio($a) {
         'imagen' => mb_convert_encoding($a->imagen, 'UTF-8', 'UTF-8'),
         'nombre' => mb_convert_encoding($a->nombre, 'UTF-8', 'UTF-8'),
         'texto' => mb_convert_encoding($a->texto, 'UTF-8', 'UTF-8'),
-        'precio' => $a->precio
+        'precio' => $a->precio,
+        'estado' => mb_convert_encoding($a->estado, 'UTF-8', 'UTF-8')
     ];
 } 
 

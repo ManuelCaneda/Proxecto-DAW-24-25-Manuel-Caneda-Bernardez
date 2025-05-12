@@ -11,18 +11,18 @@ class Usuario extends ModelObject{
     public $pass;
     public $tipo;
 
-    function __construct($id, $nombre, $apellidos, $email, $pass, $tipo) {
-        $this->id = $id;
+    function __construct($nombre, $apellidos, $email, $pass, $tipo, $id=null) {
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->email = $email;
         $this->pass = $pass;
         $this->tipo = $tipo;
+        $this->id = $id;
     }
 
     public static function fromJson($json):ModelObject{
         $data = json_decode($json);
-        return new Usuario($data->id, $data->nombre, $data->apellidos, $data->email, $data->pass, $data->tipo);
+        return new Usuario($data->nombre, $data->apellidos, $data->email, $data->pass, $data->tipo,$data->id);
     }
 
 
@@ -45,7 +45,7 @@ class UsuarioModel extends Model
             $statement = $pdo->query($sql);
             $resultado = array();
             foreach($statement as $b){
-                $usuario = new Usuario($b['id'], $b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario']);
+                $usuario = new Usuario($b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'], $b['id']);
                 $resultado[] = $usuario;
             }
         } catch (PDOException $th) {
@@ -69,7 +69,7 @@ class UsuarioModel extends Model
             $statement->bindValue(1, $usuarioId[0], PDO::PARAM_INT);
             $statement->execute();
             if($b = $statement->fetch()){
-                $resultado = new Usuario($b['id'], $b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario']);
+                $resultado = new Usuario($b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'], $b['id']);
             }
             
         } catch (Throwable $th) {
