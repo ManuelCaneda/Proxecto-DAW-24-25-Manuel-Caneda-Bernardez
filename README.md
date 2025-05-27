@@ -22,15 +22,13 @@ As tecnoloxías que serán utilizadas para a realización desta web son: HTML5, 
 
 ## Instalación / Posta en marcha
 
-> *EXPLICACIÓN*: Neste apartado describe con toda precisión e a poder ser coa maior simplicidade/facilidade posible, como poñer en marcha a túa aplicación para probala (nun ambiente local). Valorarase moi positivamente que este proceso sexa o máis fácil posible, cunha simple instrución (p. e. un script de instalación, descarga e posta en marcha dun contedor,...).
->
-
-Requírese de ter XAMPP instalado. Unha vez tendoo instalado, soamente haberá que executar o arquivo "installer.exe" (seleccionar o correcto dependendo do teu sistema operativo).
+Requírese de ter XAMPP instalado. Unha vez tendoo instalado, haberá que ir á carpeta 'instalar' e abrir o executable correcto dependendo do teu sistema operativo. Unha vez feito iso, importaremos o arquivo 'bd.sql' no phpMyAdmin (na url de 'localhost/phpmyadmin'), e a páxina xa sería accesible se entras na url 'proyecto.local'.
 
 ## Uso
 
-> *EXPLICACIÓN*: É este apartado describe brevemente como se usará a aplicación Web do proxecto. Describe o uso da interface web *só o uso** (a modo de sumario) *dos aspectos máis relevantes do seu funcionamento** (máxima brevidade, coma se fose un anuncio reclamo ou comercial).
->
+A aplicación ten tres interfaces: a interfaz do cliente, do usuario e do administrador. O cliente pode ver os seus anuncios e editalos, publicalos, poñelos como borrador ou eliminalos. Polo lado dos clientes, eles poden ver os anuncios publicados en toda a web e buscar os que desexen na barra de búsqueda do header. Por último, o administrador terá acceso a unha zona de administración na que poderá xestionar tanto usuarios como anuncios ou valoracións, podendo borralos, editar os anuncios e usuarios e chatear cos usuarios.
+
+Todos teñen en común que poden editar o seu perfil e acceso ao apartado de mensaxería.
 
 ## Sobre o autor
 
