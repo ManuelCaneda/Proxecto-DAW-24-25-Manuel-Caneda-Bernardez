@@ -25,6 +25,8 @@ As tecnoloxías que serán utilizadas para a realización desta web son: HTML5, 
 > *EXPLICACIÓN*: Neste apartado describe con toda precisión e a poder ser coa maior simplicidade/facilidade posible, como poñer en marcha a túa aplicación para probala (nun ambiente local). Valorarase moi positivamente que este proceso sexa o máis fácil posible, cunha simple instrución (p. e. un script de instalación, descarga e posta en marcha dun contedor,...).
 >
 
+Requírese de ter XAMPP instalado. Unha vez tendoo instalado, soamente haberá que executar o arquivo "installer.exe" (seleccionar o correcto dependendo do teu sistema operativo).
+
 ## Uso
 
 > *EXPLICACIÓN*: É este apartado describe brevemente como se usará a aplicación Web do proxecto. Describe o uso da interface web *só o uso** (a modo de sumario) *dos aspectos máis relevantes do seu funcionamento** (máxima brevidade, coma se fose un anuncio reclamo ou comercial).
