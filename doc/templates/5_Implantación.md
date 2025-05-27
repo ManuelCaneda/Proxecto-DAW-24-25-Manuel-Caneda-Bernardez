@@ -33,7 +33,7 @@ Non sería necesario formar ós usuarios debido a que a plataforma é moi intuit
 
 **Uso da plataforma**
 
-O inicio de sesión igual para todos os tipos de clientes, chégase a él a partir da páxina de inicio, no botón do header que pone "INICIAR SESIÓN". Para rexistrarse, os usuarios poden facelo na páxina accedendo ao apartado de rexistro por medio do apartado de login. Os clientes deberán contactar co equipo de ProHive.
+O inicio de sesión igual para todos os tipos de clientes, chégase a él a partir da páxina de inicio, no botón do header que pon "INICIAR SESIÓN". Para rexistrarse, os usuarios poden facelo na páxina accedendo ao apartado de rexistro por medio do apartado de login. Os clientes deberán contactar co equipo de ProHive.
 
 - Usuario común: nada máis iniciar sesión verá 5 anuncios destacados, e no header verá unha barra de búsqueda que pode utilizar para buscar o anuncio que desexe. Tamén no header poderá ver dous iconos: unha persona e un icono de chat. No icono de chat poderá acceder as súas conversacións, e na persoa poderá acceder á información da súa conta e editala.
 - Usuario cliente: ao iniciar sesión poderá ver os seus anuncios e crear anuncios novos se lle dan ao símbolo '+', tendo a posibilidade tamén de eliminar ou editar os anuncios que xa ten creados, ademáis de poder acceder aos chats e ao seu perfil ao igual que os usuarios comúns.
