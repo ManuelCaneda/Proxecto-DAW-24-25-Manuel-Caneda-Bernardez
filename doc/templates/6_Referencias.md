@@ -22,7 +22,7 @@
 ## 3- Sitios oficiais do software utilizado
 
 - AOS: https://michalsnik.github.io/aos/
-- Math.js: https://mathjs.org
+- Composer: https://getcomposer.org/
 - PHP: https://www.php.net
 - XAMPP: https://www.apachefriends.org/es/index.html
 
