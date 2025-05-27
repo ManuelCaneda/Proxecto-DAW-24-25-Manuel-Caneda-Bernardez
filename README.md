@@ -48,8 +48,6 @@ Formas de contactar conmigo:
 
 ## Índice
 
-> *EXPLICACIÓN*: Simplemente indexa ordenadamente todo o tey proxecto.
-
 1. [Anteproyecto](doc/templates/1_Anteproxecto.md)
 2. [Análise](doc/templates/2_Analise.md)
 3. [Deseño](doc/templates/3_Deseño.md)
@@ -60,7 +58,7 @@ Formas de contactar conmigo:
 
 ## Guía de contribución
 
-> EXPLICACIÓN*: Tratándose dun proxecto de software libre, é moi importante que expoñas como se pode contribuír co teu proxecto. Algúns exemplos disto son realizar novas funcionalidades, corrección e/o optimización do código, realización de tests automatizados, novas interfaces de integración, desenvolvemento de plugins etc. Se o máis conciso que poidas.
+Se queres contribuir no proxecto na implementación de novas funcionalidades, correccións ou optimizacións, podes facer un fork do repositorio e facer pull requests a partir do fork.
 
 ## Links
 
