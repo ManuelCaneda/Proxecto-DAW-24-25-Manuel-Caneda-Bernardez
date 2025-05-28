@@ -97,6 +97,85 @@ class MensajeModel extends Model
         return $resultado;
     }
 
+    public function getConversaciones($ids):array|null
+    {
+        $sql = "SELECT * 
+                FROM mensajes 
+                WHERE (id_emisor = ? AND id_receptor = ?)
+                OR (id_emisor = ? AND id_receptor = ?)
+                ORDER BY fecha, hora";
+        $pdo = self::getConnection();
+        $resultado = [];
+        
+        try {
+            $statement = $pdo->prepare($sql);
+            $statement->bindValue(1, $ids[0], PDO::PARAM_INT);
+            $statement->bindValue(2, $ids[1], PDO::PARAM_INT);
+            $statement->bindValue(3, $ids[1], PDO::PARAM_INT);
+            $statement->bindValue(4, $ids[0], PDO::PARAM_INT);
+            
+            $statement->execute();
+            $query = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach($query as $b){
+                $msg = new Mensaje($b['id_emisor'], 
+                $b['id_receptor'],
+                 $b['texto'], 
+                 $b['id'],
+                 $b['fecha'],
+                 $b['hora']);
+                $resultado[] = $msg;
+            }
+            
+        } catch (Throwable $th) {
+            error_log("Error UsuarioModel->getConversaciones(".var_dump($ids).")");
+            error_log($th->getMessage());
+        } finally {
+            $statement = null;
+            $pdo = null;
+        }
+
+        return $resultado;
+    }
+
+    public function getUltimoMsg($ids)
+    {
+        $sql = "SELECT * 
+                FROM mensajes 
+                WHERE (id_emisor = ? AND id_receptor = ?)
+                OR (id_emisor = ? AND id_receptor = ?)
+                ORDER BY fecha, hora DESC LIMIT 1";
+        $pdo = self::getConnection();
+        $resultado = null;
+        
+        try {
+            $statement = $pdo->prepare($sql);
+            $statement->bindValue(1, $ids[0], PDO::PARAM_INT);
+            $statement->bindValue(2, $ids[1], PDO::PARAM_INT);
+            $statement->bindValue(3, $ids[1], PDO::PARAM_INT);
+            $statement->bindValue(4, $ids[0], PDO::PARAM_INT);
+            
+            $statement->execute();
+            if($b = $statement->fetch()){
+                $resultado = new Mensaje($b['id_emisor'],
+                 $b['id_receptor'],
+                  $b['texto'],
+                  $b['id'],
+                  $b['fecha'],
+                     $b['hora']);
+            }
+            
+        } catch (Throwable $th) {
+            error_log("Error UsuarioModel->getUltimoMsg(".var_dump($ids).")");
+            error_log($th->getMessage());
+        } finally {
+            $statement = null;
+            $pdo = null;
+        }
+
+        return $resultado;
+    }
+
     public function insert($mensaje)
     {
         $sql = "INSERT INTO mensajes(id_emisor,id_receptor,texto) VALUES (:id_emisor, :id_receptor, :texto)";
@@ -123,33 +202,6 @@ class MensajeModel extends Model
     public function update($mensaje, $mensajeId)
     { 
         return ["mensaje"=>"No se puede modificar un mensaje"];
-        // $sql = "UPDATE mensajes SET
-        //     nombre=:nombre,
-        //     apellidos=:apellidos,
-        //     email=:email
-        //     WHERE id=:id";
-
-        // $pdo = self::getConnection();
-        // $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        // $resultado = false;
-
-        // try {
-        //     $statement = $pdo->prepare($sql);
-        //     $statement->bindValue(":nombre", $mensaje->nombre, PDO::PARAM_STR);
-        //     $statement->bindValue(":apellidos", $mensaje->apellidos, PDO::PARAM_STR);
-        //     $statement->bindValue(":email", $mensaje->email, PDO::PARAM_STR);
-        //     $statement->bindValue(":id", $mensajeId, PDO::PARAM_INT);
-            
-        //     $resultado = $statement->execute();
-        // } catch (PDOException $th) {
-        //     error_log("Error MensajeModel->update(" . implode(",", $mensaje) . ", $mensajeId)");
-        //     error_log($th->getMessage());
-        // } finally {
-        //     $statement = null;
-        //     $pdo = null;
-        // }
-
-        // return $resultado;
     }
 
     public function delete($mensajeId)

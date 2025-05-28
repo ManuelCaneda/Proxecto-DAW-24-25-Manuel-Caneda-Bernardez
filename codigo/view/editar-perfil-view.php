@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./view/src/css/style.css">
     <link rel="icon" type="image/x-icon" href="./view/src/assets/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        let id = <?php echo $_SESSION['logged'];?>
+    </script>
     <script src="./view/src/js/editar-perfil.js" defer></script>
 </head>
 <body>
@@ -42,11 +45,39 @@
                     <i class="fa-solid fa-pencil editar_campo_btn"></i>
                 </article>
             </p>
-            <p class="editar__btns">
-                <button class="btn editar__btn" data-id="<?php echo $user->getId() ?>" type="submit">Guardar</button>
-                <a href="."><button class="btn cancelar__btn">Cancelar</button></a>
-            </p>
+            <?php if($user->getTipo()==3): ?>
+                <p>
+                    <label for="direccion">Dirección:</label>
+                    <article class="input_perfil">
+                        <input type="text" name="direccion" id="direccion" value="<?php echo $user->getDireccion() ?>" disabled>
+                        <i class="fa-solid fa-pencil editar_campo_btn"></i>
+                    </article>
+                </p>
+                <p>
+                    <label for="horario_invierno">Horario de Invierno:</label>
+                    <article class="input_perfil">
+                        <input type="text" name="horario_invierno" id="horario_invierno" value="<?php echo $user->getHorario_invierno() ?>" disabled>
+                        <i class="fa-solid fa-pencil editar_campo_btn"></i>
+                    </article>
+                </p>
+                <p>
+                    <label for="horario_verano">Horario de Verano:</label>
+                    <article class="input_perfil">
+                        <input type="text" name="horario_verano" id="horario_verano" value="<?php echo $user->getHorario_verano() ?>" disabled>
+                        <i class="fa-solid fa-pencil editar_campo_btn"></i>
+                    </article>
+                </p>
+            <?php endif; ?>
         </form>
+        <p class="editar__btns">
+            <button class="btn editar__btn" data-id="<?php echo $user->getId() ?>" type="submit">Guardar</button>
+            <a href=".">
+                <button class="btn cancelar__btn">Cancelar</button>
+            </a>
+        </p>
+        <a href="?controller=user&action=logout">
+            <button class="btn logout__btn">Cerrar Sesión</button>
+        </a>
    </main>
    <footer></footer>
 </body>

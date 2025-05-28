@@ -6,6 +6,7 @@
     <title>Login - ProHive</title>
     <link rel="icon" type="image/x-icon" href="./view/src/assets/img/favicon.png">
     <link rel="stylesheet" href="./view/src/css/style.css">
+    <script src="./view/src/js/registrar.js" defer></script>
 </head>
 <body class="register_body">
     <main class="register_main">
@@ -20,6 +21,12 @@
             if(isset($data['check_pass']) && $data['check_pass'] == false):
         ?>
             <p class="register_false">Las contraseñas no coinciden</p>
+        <?php endif; ?>
+
+        <?php 
+            if(isset($data['campos_vacios']) && $data['campos_vacios'] == true):
+        ?>
+            <p class="register_false">Rellena todos los campos</p>
         <?php endif; ?>
         <form class="register_form" action="?controller=user&action=checkRegistro" method="POST">
             <p>

@@ -14,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2.5rem;
+    gap: 3rem;
     z-index: 100;
 }
 
@@ -24,6 +25,7 @@
 
 .header__nav ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 0 2.5rem;
     list-style-type: none;
     color: var(--main-text-color);
@@ -73,7 +75,12 @@
 .main {
     flex:1;
     height: 100%;
+    width: 100%;
     padding: 1rem;
+}
+
+.landing_main {
+    padding: 0;
 }
 
 /*=============================================
@@ -115,10 +122,6 @@
     text-transform: uppercase;
 }
 
-.portada__text p {
-    font-size: 20px;
-}
-
 /*=====  End of Estilos de la portada  ======*/
 
 
@@ -132,6 +135,7 @@
     justify-content: space-around;
     flex:1;
     padding: 5rem 1rem;
+    gap: 2rem;
 }
 
 .nosotros__info {
@@ -140,11 +144,9 @@
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    width: 50%;
 }
 
 .nosotros figure {
-    width: 40%;
     height: auto;
     object-fit: cover;
 }
@@ -225,7 +227,8 @@
     align-items: center;
 }
 
-.contacto__form {
+.contacto__form,
+.rgpd_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,12 +238,14 @@
     width: 50%;
 }
 
-.contacto__form label {
+.contacto__form label,
+.rgpd_form label {
     align-self: flex-start;
     font-weight: bold;
 }
 
-.contacto__form input {
+.contacto__form input,
+.rgpd_form input {
     width: 100%;
     height: 50px;
 
@@ -249,13 +254,25 @@
     padding: 0 .5rem;
 }
 
-.contacto__form textarea {
+.contacto__form textarea,
+.rgpd_form textarea {
     width: 100%;
     height: 100px;
     
     padding: .5rem;
 
     border: 1px solid var(--main-color);
+}
+
+.contacto__form select,
+.rgpd_form select {
+    width: 100%;
+    height: 50px;
+    
+    padding: 0 .5rem;
+
+    border: 1px solid var(--main-color);
+    border-image: 0;
 }
 
 /*======  End of Estilos de formulario de contacto  ======*/
@@ -321,7 +338,7 @@
     border-radius: 25px;
     padding: 1rem;
 
-    width: 30%;
+    width: 40%;
 }
 
 .login_title, .register_title {
@@ -444,6 +461,7 @@
 
 .anuncios_destacados {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -457,6 +475,7 @@
 .card_anuncio{
     background-color: var(--card-bgcolor);
     max-width: 300px;
+    width: 300px;
     border-radius: 10px;
 
     display: flex;
@@ -464,7 +483,6 @@
     justify-content: space-between;
     gap: .5rem;
     padding-bottom: 1rem;
-    aspect-ratio: 3 / 4; /* mantiene proporción dinámica, como 200x266 */
 }
 
 .anuncio_img, .anuncio_img img {
@@ -485,7 +503,7 @@
 }
 
 .anuncio_owner{
-    font-size: 14px;
+    font-size: 12px;
     color: #8d8d8d;
     font-weight: normal;
 }
@@ -515,6 +533,17 @@
 
 .anuncio_btn {
     align-self: center;
+}
+
+.search_noresult {
+    text-align: center;
+    margin: 25vh auto;
+}
+
+.crear_anuncio_btns {
+    display: flex;
+    justify-content: center;
+    gap: .25rem;
 }
 
 
@@ -605,7 +634,20 @@
 =            Estilos del formulario            =
 =============================================*/
 
-.editar_perfil_main{
+.form_perfil,
+.form_crear_anuncio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    
+    width: 50%;
+}
+
+.editar_perfil_main,
+.crear_anuncio_main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -613,30 +655,23 @@
     gap: 1rem;
 }
 
-.editar_perfil_main form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: .5rem;
-
-    max-width: 40%;
-    width: 40%;
-}
-
-.editar_perfil_main form input {
+.editar_perfil_main form input,
+.crear_anuncio_main form input {
     border: 0;
     width: 100%;
     padding: .5rem;
 }
 
-.editar_perfil_main form p:not(.editar__btns){
+.editar_perfil_main form p:not(.editar__btns),
+.crear_anuncio_main form p:not(.editar__btns) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: .5rem;
 }
 
-.input_perfil {
+.input_perfil,
+.input_crear_anuncio {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -659,6 +694,10 @@
 
 .editar__btns {
     align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
 }
 
 /*=====  End of Estilos del formulario  ======*/
@@ -700,7 +739,7 @@
     padding: 1rem;
 }
 
-.chat_abierto {
+.chat_abierto{
     grid-column: 2 / 3;
     border-left: 1px solid var(--main-color);
     
@@ -735,8 +774,8 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-    padding: 0 1rem 1rem 1rem;
-    height: calc(70vh - 1px);
+    padding: .5rem 1rem 1rem 1rem;
+    height: 75vh;
     overflow-y: auto; /* scroll vertical automático si es necesario */
     scroll-behavior: smooth;
 }
@@ -871,15 +910,272 @@
 
 /*=====  End of Estilos del chat  ======*/
 
+
+/*==========================================================
+=            Estilos de la Página de un anuncio            =
+============================================================*/
+
+.main_pag_anuncio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 0;
+
+    padding: 1rem;
+}
+
+.pag_anuncio_info {
+    display: flex;
+    gap: 1rem;
+    max-height: 90vh;
+}
+
+.pag_anuncio_info > * {
+    flex:1;
+}
+
+.pag_anuncio_img {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pag_anuncio_img figure {
+    border: 1px solid black;
+    height: 70%;
+    border-radius: 20px;
+    transform: scale(.7);
+}
+
+.pag_anuncio_img figure img {
+    border-radius: 20px;
+}
+
+.pag_anuncio_img ul {
+    list-style-type: none;
+}
+
+.pag_anuncio_texto {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    gap: 1rem;
+
+    text-align: center;
+}
+
+.contactar_textarea {
+    padding: .5rem;
+    height: 300px;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*===================================================
+=            Estilos de las valoraciones            =
+=====================================================*/
+
+.form_valoracion {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.form_valoracion textarea {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.lista_valoraciones {
+    list-style-type: none;
+    display: grid; /* Cambia a grid */
+    grid-template-columns: repeat(3, 1fr); /* Ajusta el ancho de las columnas */
+    gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+.card_valoracion {
+    background-color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    flex: 1 1 calc(33.333% - 1rem); /* Ajusta el ancho como antes */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño */
+    min-height: 100px; /* Define una altura mínima para igualar los elementos */
+    height: auto; /* Permite que crezcan si el contenido es mayor */
+}
+
+.autor_valoracion {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    font-weight: bold;
+}
+
+.valoracion_estrellas {
+    width: 100px;
+    height: 15px;
+}
+
+.contenido_valoracion {
+    text-align: justify;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/*=====  End of Estilos de las valoraciones  ======*/
+
+
+
+/*======  End of Estilos de la Página de un anuncio  ======*/
+
+
+/*=============================================
+=            Estilos de crear anuncio            =
+=============================================*/
+
+.crear_anuncio_main textarea {
+    width: 100%;
+    height: 150px;
+    padding: .5rem;
+
+    background-color: rgba(239, 239, 239, 0.3);
+}
+
+.form_crear_anuncio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_crear_anuncio p {
+    width: 100%;
+}
+
+.form_crear_anuncio p input,
+.form_crear_anuncio p textarea {
+    border:1px solid var(--main-color);
+}
+
+/*=====  End of Estilos de crear anuncio  ======*/
+
+
+/*==========================================
+=            Estilos de la RGPD            =
+============================================*/
+
+.rgpd_main h2,
+.rgpd_main h3 {
+    margin: 1rem 0;
+}
+
+.rgpd_form {
+    margin: 5rem auto;
+    width: 50%;
+}
+
+.rgpd_main h3 + p {
+    text-align: justify;
+}
+
+.rgpd_form p {
+    width: 100%;
+}
+
+.rgpd_form p:last-of-type {
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+}
+
+.rgpd_form p:last-of-type input {
+    width: 20px;
+    height: 20px;
+}
+
+/*=====  End of Estilos de la RGPD  ======*/
+
+
+/*===================================================
+=            Estilos de la zona de Admin            =
+=====================================================*/
+
+.titulo-administracion {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.lista-gestion-administracion {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tabla-gestion-usuarios,
+.tabla-gestion-anuncios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-gestion-usuarios th, 
+.tabla-gestion-usuarios td,
+.tabla-gestion-anuncios th, 
+.tabla-gestion-anuncios td {
+    border: 2px solid var(--main-color);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.tabla-gestion-usuarios th,
+.tabla-gestion-anuncios th {
+    background-color: var(--secondary-color-light);
+    color: var(--main-text-color);
+    font-weight: bold;
+}
+
+.tabla-gestion-usuarios tr:nth-child(odd),
+.tabla-gestion-anuncios tr:nth-child(odd) {   
+    background-color: #d9d9d9; 
+}
+
+.tabla-gestion-usuarios tr:nth-child(even),
+.tabla-gestion-anuncios tr:nth-child(even) {   
+    background-color: #fff; 
+}
+
+/*======  End of Estilos de la zona de Admin  ======*/
+
+
+
 /*=============================================
 =            Estilos de Media Queries            =
 =============================================*/
 
-@media screen and (max-width:720px){
+@media screen and (max-width:768px){
     .header{
         flex-direction: column;
         gap: .5rem;
         align-items: center;
+    }
+
+    .header_home {
+        padding-bottom: 1rem;
+    }
+
+    .header__buscador input{
+        width: 100%;
+        justify-content: center;
     }
 
     .header__nav, .header__nav ul li, .header__loginBtn{
@@ -887,6 +1183,135 @@
         width: 0;
         height: 0;
         transform: translateY(-1000000000000px);
+    }
+
+    .lista_valoraciones {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .portada__text {
+        width: 80%;
+    }
+    
+    .nosotros {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    
+    /*=============================================
+    =            Login y register            =
+    =============================================*/
+    
+    .login_main, .register_main {    
+        width: 70%;
+    }
+    
+    /*=====  End of Login y register  ======*/
+    
+    
+    /*=============================================
+    =            Estilos de ver anuncio            =
+    =============================================*/
+    
+    .pag_anuncio_info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pag_anuncio_img figure{
+        width: 50%; /* Ajusta el ancho al 50% del contenedor */
+        margin: 0 auto; /* Centra el elemento */
+        transform: none;
+    }
+
+    .pag_anuncio_texto textarea{
+        height: 75px;
+        padding-top: 0;
+    }
+
+    .pag_anuncio_valoraciones {
+        margin-top: 10rem;
+    }
+
+    .form_valoracion {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /*=====  End of Estilos de ver anuncio  ======*/
+    
+    
+    /*=============================================
+    =            Estilos de los chats            =
+    =============================================*/
+    
+    .chats_disponibles {
+        width: 100vw;
+    }
+
+    .chat_abierto {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transform: translate(-9999%, -9999%);
+    }
+
+    .mostrar {
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        background-color: white;
+    }
+
+
+    .mensajes {
+        height: 60vh;
+    }
+
+    .mensaje-enviado,
+    .mensaje-recibido {
+        padding-right: 15vw;
+    }
+    
+    /*=====  End of Estilos de los chats  ======*/
+    
+    
+    /*=============================================
+    =            Estilos de la zona de admin            =
+    =============================================*/
+    
+    td,th{
+        font-size: .65rem;
+    }
+    
+    /*=====  End of Estilos de la zona de admin  ======*/
+    
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        width: 10rem; /* Logo más pequeño en pantallas pequeñas */
+    }
+
+    .lista_valoraciones {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+
+    td,th {
+        font-size: .5rem;
     }
 }
 
@@ -908,6 +1333,8 @@
     border-radius: 50%;
     animation: l6 2s infinite linear;
     position: relative;
+
+    margin: 25vh auto;
   }
   .loader:before {
     content: "";

@@ -2,7 +2,7 @@
 include_once("UsuarioController.php");
 include_once("AnuncioController.php");
 include_once("MensajeController.php");
-// include_once("ValoracionController.php");
+include_once("ValoracionController.php");
 
 /**
  * Definicion de los nombres asociados a cada controlador en la URI.

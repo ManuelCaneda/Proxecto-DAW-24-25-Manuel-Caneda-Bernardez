@@ -1,34 +1,40 @@
 const $d = document,
-      $listaAnuncios = $d.querySelector(".anuncios_destacados");
+      $main = $d.querySelector("main"),
+      $titulo = $d.querySelector("h1"),
+      $listaAnuncios = $d.querySelector(".anuncios_destacados"),
+      $busquedaInput = $d.querySelector(".header__buscador input"),
+      $busquedaBtn = $d.querySelector(".header__buscador button");
 
 const anuncios = [];
-
-function ajax(options){
-    const {url,method,fsuccess,ferror,data} = options
-  
-    fetch(url,{
-      method: method || "GET",
-      headers:{
-        "Content-type":"application/json;charset=utf-8"
-      },
-      body:JSON.stringify(data)
-    })
-    .then(resp=>resp.ok?resp.json():Promise.reject(resp))
-    .then(json=>fsuccess(json))
-    .catch(error=>ferror(error))
-}
+const url = "http://proyecto.local/api/"
 
 function getAnuncios(){
+    $titulo.textContent = "Destacados"
     ajax({
-        url:"http://proyecto.local/api/anuncios",
+        url:`${url}anuncios/publicados/?limit=4`,
         method:"GET",
         fsuccess:(json)=>{
             anuncios.splice(0,anuncios.length,...json)
             renderAnuncios(anuncios)
-            console.log(anuncios)
         },
         ferror:(error)=>{
             console.log(error)
+        }
+    })
+}
+
+function getAnunciosBySearch(){
+    busqueda = $busquedaInput.value
+    $titulo.textContent = `Resultados de la búsqueda: ${busqueda}`
+    ajax({
+        url:`${url}anuncios/busqueda/${busqueda}`,
+        method:"GET",
+        fsuccess:(json)=>{
+            anuncios.splice(0,anuncios.length,...json)
+            renderAnuncios(anuncios)
+        },
+        ferror:(error)=>{
+            $listaAnuncios.innerHTML = `<h2 class="search_noresult">No se encontraron anuncios</h2>`
         }
     })
 }
@@ -42,17 +48,28 @@ function renderAnuncios(anuncios){
             <section class="anuncio_info">
                 <hgroup>
                     <h2 class="anuncio_title">${actual.nombre}</h2>
-                    <h4 class="anuncio_owner">${actual.nombre}</h4>
+                    <h4 class="anuncio_owner">${actual.autor}</h4>
                 </hgroup>
                 <p class="anuncio_price">${actual.precio}&euro;</p>
             </section>
             <p class="anuncio_desc">${actual.texto}</p>
-            <button class="anuncio_btn btn">Más información</button>
+            <a href="?controller=page&action=verAnuncio&id=${actual.id_anuncio}" class="anuncio_btn">
+                <button class="anuncio_btn btn">Más información</button>
+            </a>
         </li>
         `
     ,'')
 }
 
-$d.addEventListener("DOMContentLoaded"  , () => {
-    getAnuncios(anuncios)
+$d.addEventListener("DOMContentLoaded", () => {
+    getAnuncios()
+
+    $busquedaBtn.addEventListener("click", ev=>{
+        ev.preventDefault()
+        $listaAnuncios.innerHTML = "<div class='loader'></div>";
+        if($busquedaInput.value.length > 0)
+            getAnunciosBySearch()
+        else 
+            getAnuncios()
+    })
 })

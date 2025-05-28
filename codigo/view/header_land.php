@@ -17,7 +17,7 @@
                 <span class="header__nav_barra"></span>
             </li>
             <li>
-                <a href="?controller=page&action=land_page#contacta">Contacta</a>
+                <a href="?controller=page&action=land_page#contacto">Contacta</a>
                 <span class="header__nav_barra"></span>
             </li>
         </ul>

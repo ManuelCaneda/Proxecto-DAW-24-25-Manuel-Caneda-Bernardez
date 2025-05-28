@@ -19,10 +19,14 @@
 
 <?php else: ?>
 
+    
+
     <header class="header header_home">
         <a class="header__logo" href=".">
             <img src="./view/src/assets/img/logo.png" alt="">
         </a>
+
+        <?php if($user->getTipo() == 2 && $controller == 'page' && $action == 'main'): ?>
 
         <form action="" class="header__buscador">
             <input type="text" placeholder="Buscar">
@@ -30,6 +34,8 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
+
+        <?php endif; ?>
         
         <section class="header__opciones">
             <a href="?controller=user&action=chat" class="header__chat">

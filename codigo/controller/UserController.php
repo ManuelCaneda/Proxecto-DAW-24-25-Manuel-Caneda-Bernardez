@@ -42,7 +42,7 @@ class UserController {
         $pass1 = $_POST['pass1']??null;
         $pass2 = $_POST['pass2']??null;
 
-        if(isset($nombre) && isset($aps) && isset($email) && isset($pass1) && isset($pass2)){
+        if($nombre!='' && $aps!='' && $email!='' && $pass1!='' && $pass2!=''){
             if($pass1 == $pass2){
                 $user = new Usuario($nombre,$aps,$email,$pass1);
                 $model = new UsuarioModel();
@@ -59,8 +59,11 @@ class UserController {
                 $data['confirm_pass'] = false;
             }
 
-            return View::show($vista,$data);
+        } else {
+            $vista = "register";
+            $data['campos_vacios'] = true;
         }
+        return View::show($vista,$data);
     }
 
     public function editarPerfil(){
@@ -70,5 +73,10 @@ class UserController {
     
     public function chat(){
         return View::show("chat");
+    }
+
+    public function logout(){
+        unset($_SESSION['logged']);
+        header("Location: .");
     }
 }

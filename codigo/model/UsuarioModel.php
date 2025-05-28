@@ -8,14 +8,20 @@ class Usuario{
     public $email;
     public $pass;
     public $tipo;
+    public $direccion;
+    public $horario_invierno;
+    public $horario_verano;
 
-    public function __construct($nombre,$aps,$email,$pass,$tipo,$id=null){
+    public function __construct($nombre,$aps,$email,$pass=null,$tipo=null,$id=null, $direccion=null, $horario_invierno=null, $horario_verano=null) {
         $this->nombre = $nombre;
         $this->aps = $aps;
         $this->email = $email;
         $this->pass = $pass;
         $this->tipo = $tipo;
         $this->id = $id;
+        $this->direccion = $direccion;
+        $this->horario_invierno = $horario_invierno;
+        $this->horario_verano = $horario_verano;
     }
 
     /**
@@ -137,6 +143,66 @@ class Usuario{
 
         return $this;
     }
+
+    /**
+     * Get the value of horario_verano
+     */ 
+    public function getHorario_verano()
+    {
+        return $this->horario_verano;
+    }
+
+    /**
+     * Set the value of horario_verano
+     *
+     * @return  self
+     */ 
+    public function setHorario_verano($horario_verano)
+    {
+        $this->horario_verano = $horario_verano;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of horario_invierno
+     */ 
+    public function getHorario_invierno()
+    {
+        return $this->horario_invierno;
+    }
+
+    /**
+     * Set the value of horario_invierno
+     *
+     * @return  self
+     */ 
+    public function setHorario_invierno($horario_invierno)
+    {
+        $this->horario_invierno = $horario_invierno;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of direccion
+     */ 
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * Set the value of direccion
+     *
+     * @return  self
+     */ 
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
 }
 
 class UsuarioModel {
@@ -144,7 +210,7 @@ class UsuarioModel {
         $pass = sha1($pass);
         
         $pdo = BBDD::getConnection();
-        $sql = "SELECT id, nombre, apellidos, email, pass, tipo_usuario FROM usuarios
+        $sql = "SELECT * FROM usuarios
                 WHERE email = ? 
                 AND pass = ?";
 
@@ -158,7 +224,7 @@ class UsuarioModel {
             $statement->execute();
             
             if($row = $statement->fetch()){
-                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["tipo_usuario"],$row["id"]);
+                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["tipo_usuario"],$row["id"], $row["direccion"], $row["horario_invierno"], $row["horario_verano"]);
             }
         } catch (PDOException $e) {
             error_log("Error al obtener el usuario: " . $e->getMessage());
@@ -172,7 +238,7 @@ class UsuarioModel {
 
     public function getById($id){
         $pdo = BBDD::getConnection();
-        $sql = "SELECT id, nombre, apellidos, email, pass, tipo_usuario FROM usuarios
+        $sql = "SELECT * FROM usuarios
                 WHERE id = ?";
 
         $user = null;
@@ -184,7 +250,7 @@ class UsuarioModel {
             $statement->execute();
             
             if($row = $statement->fetch()){
-                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["tipo_usuario"], $row["id"]);
+                $user = new Usuario($row["nombre"],$row["apellidos"],$row["email"],$row["pass"],$row["tipo_usuario"], $row["id"], $row["direccion"], $row["horario_invierno"], $row["horario_verano"]);
             }
         } catch (PDOException $e) {
             error_log("Error al obtener el usuario: " . $e->getMessage());
@@ -221,4 +287,6 @@ class UsuarioModel {
 
         return $toret;
     }
+
+    
 }

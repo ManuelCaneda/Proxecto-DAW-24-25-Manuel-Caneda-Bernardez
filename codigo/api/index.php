@@ -1,7 +1,8 @@
 <?php
 include_once("globals.php");
 include_once("controller/Controller.php");
-include_once("controller/AuthController.php");
+
+session_start();
 
 function getIds(array $uri):array{
     $ids = [];
@@ -41,35 +42,62 @@ try {
     die();
 }
 
-// $token = $_SERVER["HTTP_X_API_KEY"];
-// $auth = AuthController::checkAccess($elemento,$metodo,$token);
-// if(!$auth){
-//     Controller::sendNotFound("No tienes permisos.");
-//     die();
-// }
+
+
+$headers = getallheaders();
+$tokenCliente = $headers['X-CSRF-Token'] ?? '';
+
+// echo("Token recibido: " . $tokenCliente . "\n");
+// echo("Token de sesión: " . (isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] : 'No establecido') . "\n");
+// die();
+
+if (!isset($_SESSION['csrf_token']) || $tokenCliente !== $_SESSION['csrf_token']) {
+    Controller::sendNotFound("No tienes permiso para acceder a este recurso.");
+    exit;
+}
 
 switch ($metodo) {
     case 'POST':
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
 
-        if (isset($data['_method']) && strtoupper($data['_method']) === 'PUT') {
-            if (isset($id)) {
-                $controlador->update($id, $json);
-            } else {
-                Controller::sendNotFound("Falta el ID de la banda.");
-            }
-            exit;
-        }
-
         $controlador->insert($json);
     break;
     case 'GET':
         if (isset($id)) {
-            if(isset($endpoint) && !intval($endpoint)){
+            if(isset($endpoint)){
                 switch ($endpoint) {
                     case "contactos":
                         $controlador->getContactos($id);        
+                    break;
+
+                    case "busqueda":
+                        $controlador->getBySearch($uri[4]);
+                    break;
+
+                    case "cliente":
+                        $controlador->getByCliente($id);
+                    break;
+
+                    case "publicados":
+                        $limit = (isset($_GET['limit']))? $_GET['limit'] : 5;
+                        $controlador->getPublicados($limit);
+                    break;
+
+                    case "conversacion":
+                        $controlador->getConversaciones($id);
+                    break;
+
+                    case "ultimomsg":
+                        $controlador->getUltimoMsg($id);
+                    break;
+
+                    case "anuncio":
+                        $controlador->getByAnuncio($id);
+                    break;
+
+                    case "autor":
+                        $controlador->getByAutor($id);
                     break;
                 }
             } else {

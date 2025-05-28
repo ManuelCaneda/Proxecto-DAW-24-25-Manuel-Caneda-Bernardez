@@ -42,6 +42,37 @@ class MensajeController extends Controller{
         echo json_encode($usuarios_array, JSON_PRETTY_PRINT);
     }
 
+    public function getConversaciones($id) {
+        $model = new MensajeModel();
+        $conversaciones = $model->getConversaciones($id);
+        
+        if($conversaciones==null){
+            Controller::sendNotFound("Las ids no corresponden con ninguna conversación");
+            die();
+        }
+        
+        $conversaciones_array = [];
+        
+        foreach ($conversaciones as $c) {
+            
+            $conversaciones_array[] = sanitizeMensaje($c);
+        }
+        
+        echo json_encode($conversaciones_array, JSON_PRETTY_PRINT);
+    }
+
+    public function getUltimoMsg($id) {
+        $model = new MensajeModel();
+        $msg = sanitizeMensaje($model->getUltimoMsg($id));
+        
+        if($msg==null){
+            Controller::sendNotFound("Las ids no corresponden con ninguna conversación");
+            die();
+        }
+        
+        echo json_encode($msg, JSON_PRETTY_PRINT);
+    }
+
     public function insert($object){
         $model = new MensajeModel();
         $mensaje = Mensaje::fromJson($object);

@@ -1,33 +1,20 @@
 const $d = document,
-      $listaAnuncios = $d.querySelector(".anuncios_destacados");
+      $main = $d.querySelector("main"),
+      $listaAnuncios = $d.querySelector(".anuncios_propios")
 
 const anuncios = [];
+let cliente
 
+const url = "http://proyecto.local/api/"
 const idPropio = $d.querySelector(".header__perfil").dataset.id
 
-function ajax(options){
-    const {url,method,fsuccess,ferror,data} = options
-  
-    fetch(url,{
-      method: method || "GET",
-      headers:{
-        "Content-type":"application/json;charset=utf-8"
-      },
-      body:JSON.stringify(data)
-    })
-    .then(resp=>resp.ok?resp.json():Promise.reject(resp))
-    .then(json=>fsuccess(json))
-    .catch(error=>ferror(error))
-}
-
-function getAnuncios(){
+function getCliente(){
     ajax({
-        url:`http://proyecto.local/api/anuncios/${idPropio}`,
+        url:`${url}usuarios/${idPropio}`,
         method:"GET",
         fsuccess:(json)=>{
-            anuncios.splice(0,anuncios.length,...json)
-            renderAnuncios(anuncios)
-            console.log(anuncios)
+            cliente = {...json}
+            getAnuncios(cliente)
         },
         ferror:(error)=>{
             console.log(error)
@@ -35,42 +22,93 @@ function getAnuncios(){
     })
 }
 
-function renderAnuncios(anuncios){
-    if(anuncios.length == 0){
-        $listaAnuncios.innerHTML += `<h2>No tienes anuncios</h2>`
-    } else {
-        $listaAnuncios.innerHTML = anuncios.reduce((anterior,actual)=>anterior + `
+function getAnuncios(cliente){
+    $listaAnuncios.innerHTML = "<div class='loader'></div>"
+    ajax({
+        url:`${url}anuncios/cliente/${idPropio}`,
+        method:"GET",
+        fsuccess:(json)=>{
+            anuncios.splice(0,anuncios.length,...json)
+            renderAnuncios(anuncios, cliente)
+        },
+        ferror:(error)=>{
+            renderAnuncios([], cliente)
+        }
+    })
+}
+
+function renderAnuncios(anuncios, cliente){    
+    const $loader = $d.querySelector(".loader")
+    $loader.remove()
+
+    if(anuncios.length > 0){
+        $listaAnuncios.innerHTML = anuncios.reduce((anterior,actual)=> anterior + `
             <li class="card_anuncio">
                 <figure class="anuncio_img">
-                    <img src="https://www.aislamos.com/wp-content/uploads/2024/08/facebook.jpg" alt="">
+                    <img src="${actual.imagen}" alt="">
                 </figure>
                 <section class="anuncio_info">
                     <hgroup>
-                        <h2 class="anuncio_title">Aislamientos</h2>
-                        <h4 class="anuncio_owner">Por Aislamos</h4>
+                        <h2 class="anuncio_title">${actual.nombre}</h2>
+                        <h4 class="anuncio_owner">Por ${cliente.nombre} ${cliente.apellidos}</h4>
                     </hgroup>
-                    <p class="anuncio_price">200&euro;</p>
+                    <p class="anuncio_price">${actual.precio}&euro;</p>
                 </section>
-                <p class="anuncio_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia provident nam, amet est pariatur ducimus hic mollitia quos libero quisquam vitae eum labore doloribus. Libero enim esse soluta ad.</p>
+                <p class="anuncio_desc">${(actual.texto).slice(0,100)}${(actual.texto).length>=100?"...":""}</p>
                 <section class="anuncio_estado">
-                    <p class="anuncio_estado_texto">Publicado</p>
+                    <p class="anuncio_estado_texto">${(actual.estado=="dev")?"En desarrollo":"Publicado"}</p>
                     <figure class="anuncio_estado_icon">
-                        <img src="./view/src/assets/img/check.png" alt="Icono de check verde">
+                        <img src="./view/src/assets/img/${actual.estado=="dev"?"dev":"check"}.png" alt="Icono de check verde">
                     </figure>
                 </section>
-                <button class="anuncio_btn btn">Editar información</button>
+                <section class="crear_anuncio_btns">
+                <a href="?controller=page&action=editarAnuncio&id=${actual.id_anuncio}">
+                    <button class="anuncio_btn btn">Editar información</button>
+                </a>
+                    <button class="btn fa-solid fa-trash" data-id="${actual.id_anuncio}">
+                        
+                    </button>
+                </section>
             </li>
             `
         ,'')
-    
-        if(anuncios.length < 5){
-            $listaAnuncios.innerHTML += `
-            <h2>No tienes anuncios</h2>
-            `
-        }
     }
+    
+    $listaAnuncios.innerHTML += `
+        <li class="card_anuncio add_card">
+            <figure class="add_card_icon">
+                <img src="./view/src/assets/img/plus.png" alt="">
+            </figure>
+        </li>
+    `
+    
+}
+
+function deleteAnuncio(anuncioId){
+    ajax({
+        url:`${url}anuncios/${anuncioId}`,
+        method:"DELETE",
+        fsuccess:(json)=>{
+            getAnuncios(cliente)
+        },
+        ferror:(error)=>{
+            console.log(error)
+        }
+    })
 }
 
 $d.addEventListener("DOMContentLoaded"  , () => {
-    getAnuncios(anuncios)
+    getCliente()
+
+    $main.addEventListener("click", ev=>{
+        if(ev.target.classList.contains("add_card")){
+            ev.preventDefault()
+            window.location.href = "?controller=page&action=crearAnuncio"
+        }
+
+        if(ev.target.classList.contains("fa-trash")){
+            ev.preventDefault()
+            deleteAnuncio(ev.target.dataset.id)
+        }
+    })
 })

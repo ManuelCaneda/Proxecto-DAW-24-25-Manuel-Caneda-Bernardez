@@ -10,7 +10,10 @@ function sanitizeUsuario($u) {
         'nombre' => mb_convert_encoding($u->nombre, 'UTF-8', 'UTF-8'),
         'apellidos' => mb_convert_encoding($u->apellidos, 'UTF-8', 'UTF-8'),
         'email' => mb_convert_encoding($u->email, 'UTF-8', 'UTF-8'),
-        'tipo' => $u->tipo
+        'tipo' => $u->tipo,
+        'direccion' => mb_convert_encoding($u->direccion, 'UTF-8', 'UTF-8'),
+        'horario_invierno' => mb_convert_encoding($u->horario_invierno, 'UTF-8', 'UTF-8'),
+        'horario_verano' => mb_convert_encoding($u->horario_verano, 'UTF-8', 'UTF-8')
     ];
 } 
 
@@ -73,7 +76,7 @@ class UsuarioController extends Controller{
     
     public function delete($id) {
         $model = new UsuarioModel();
-        if($model->delete($id[0])){
+        if($model->delete($id)){
             echo json_encode(["msg" => "Usuario eliminado."],JSON_PRETTY_PRINT);
         }else{
             Controller::sendNotFound("No se ha podido eliminar");

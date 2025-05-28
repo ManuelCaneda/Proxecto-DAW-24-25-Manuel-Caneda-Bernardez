@@ -43,11 +43,48 @@ class AnuncioController extends Controller{
         echo json_encode($anuncios_array, JSON_PRETTY_PRINT);
     }
 
+    public function getPublicados($limit) {
+        $model = new AnuncioModel();
+        $anuncios = $model->getPublicados($limit);
+    
+        echo json_encode($anuncios, JSON_PRETTY_PRINT);
+    }
+
+    public function getByCliente($id){
+        $model = new AnuncioModel();
+        $anuncios = $model->getByCliente($id);
+
+        if($anuncios==null){
+            Controller::sendNotFound("El cliente introducido no tiene anuncios");
+            die();
+        }
+
+        $anuncios_array = [];
+
+        foreach ($anuncios as $a) {
+            $anuncios_array[] = sanitizeAnuncio($a);
+        }
+    
+        echo json_encode($anuncios_array, JSON_PRETTY_PRINT);
+    }
+
+    public function getBySearch($search) {
+        $model = new AnuncioModel();
+        $anuncios = $model->getBySearch($search);
+
+        if($anuncios==null){
+            Controller::sendNotFound("La búsqueda no se corresponde con ningun anuncio");
+            die();
+        }
+    
+        echo json_encode($anuncios, JSON_PRETTY_PRINT);
+    }
+
     public function insert($object){
         $model = new AnuncioModel();
         $anuncio = Anuncio::fromJson($object);
         if($model->insert($anuncio)){
-            echo "Anuncio insertado.";
+            echo json_encode(["msg" => "Anuncio insertado."],JSON_PRETTY_PRINT);
         }else{
             Controller::sendNotFound("No se ha podido insertar");
         }
@@ -56,8 +93,8 @@ class AnuncioController extends Controller{
     
     public function delete($id) {
         $model = new AnuncioModel();
-        if($model->delete($id[0],$id[1])){
-            echo "Anuncio eliminado.";
+        if($model->delete($id[0])){
+            echo json_encode(["msg" => "Anuncio eliminado."],JSON_PRETTY_PRINT);
         }else{
             Controller::sendNotFound("No se ha podido eliminar");
         }
@@ -68,7 +105,7 @@ class AnuncioController extends Controller{
         $anuncio = Anuncio::fromJson($object);
 
         if($model->update($anuncio,$id[0])){
-            echo "Anuncio modificado.";
+            echo json_encode(["msg" => "Anuncio modificado."],JSON_PRETTY_PRINT);
         }else{
             Controller::sendNotFound("No se ha podido modificar");
         }

@@ -10,19 +10,25 @@ class Usuario extends ModelObject{
     public $email;
     public $pass;
     public $tipo;
+    public $direccion;
+    public $horario_invierno;
+    public $horario_verano;
 
-    function __construct($nombre, $apellidos, $email, $pass, $tipo, $id=null) {
+    public function __construct($nombre,$apellidos,$email,$pass=null,$tipo=null,$id=null, $direccion=null, $horario_invierno=null, $horario_verano=null) {
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->email = $email;
         $this->pass = $pass;
         $this->tipo = $tipo;
         $this->id = $id;
+        $this->direccion = $direccion;
+        $this->horario_invierno = $horario_invierno;
+        $this->horario_verano = $horario_verano;
     }
 
     public static function fromJson($json):ModelObject{
         $data = json_decode($json);
-        return new Usuario($data->nombre, $data->apellidos, $data->email, $data->pass, $data->tipo,$data->id);
+        return new Usuario($data->nombre, $data->apellidos, $data->email, (isset($data->pass))?$data->pass:null, (isset($data->tipo))?$data->tipo:null, (isset($data->id))?$data->id:null,(isset($data->direccion))?$data->direccion:null, isset($data->horario_invierno)?$data->horario_invierno:null, isset($data->horario_verano)?$data->horario_verano:null);
     }
 
 
@@ -45,7 +51,7 @@ class UsuarioModel extends Model
             $statement = $pdo->query($sql);
             $resultado = array();
             foreach($statement as $b){
-                $usuario = new Usuario($b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'], $b['id']);
+                $usuario = new Usuario($b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'], $b['id'], $b['direccion'], $b['horario_invierno'], $b['horario_verano']);
                 $resultado[] = $usuario;
             }
         } catch (PDOException $th) {
@@ -69,7 +75,7 @@ class UsuarioModel extends Model
             $statement->bindValue(1, $usuarioId[0], PDO::PARAM_INT);
             $statement->execute();
             if($b = $statement->fetch()){
-                $resultado = new Usuario($b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'], $b['id']);
+                $resultado = new Usuario($b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'], $b['id'], $b['direccion'], $b['horario_invierno'], $b['horario_verano']);
             }
             
         } catch (Throwable $th) {
@@ -103,7 +109,7 @@ class UsuarioModel extends Model
             $query = $statement->fetchAll(PDO::FETCH_ASSOC);
 
             foreach($query as $b){
-                $contacto = new Usuario($b['id'], $b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario']);
+                $contacto = new Usuario( $b['nombre'], $b['apellidos'], $b['email'], $b['pass'], $b['tipo_usuario'],$b['id']);
                 $resultado[] = $contacto;
             }
             
@@ -150,8 +156,11 @@ class UsuarioModel extends Model
         $sql = "UPDATE usuarios SET
             nombre=:nombre,
             apellidos=:apellidos,
-            email=:email
-            WHERE id=:id";
+            email=:email";
+
+        $sql .= $usuario->tipo == 3 ? ", direccion=:direccion, horario_invierno=:horario_invierno, horario_verano=:horario_verano" : "";
+
+        $sql .= " WHERE id=:id";
 
         $pdo = self::getConnection();
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -162,11 +171,18 @@ class UsuarioModel extends Model
             $statement->bindValue(":nombre", $usuario->nombre, PDO::PARAM_STR);
             $statement->bindValue(":apellidos", $usuario->apellidos, PDO::PARAM_STR);
             $statement->bindValue(":email", $usuario->email, PDO::PARAM_STR);
+
+            if($usuario->tipo == 3){
+                $statement->bindValue(":direccion", $usuario->direccion, PDO::PARAM_STR);
+                $statement->bindValue(":horario_invierno", $usuario->horario_invierno, PDO::PARAM_STR);
+                $statement->bindValue(":horario_verano", $usuario->horario_verano, PDO::PARAM_STR);
+            }
+
             $statement->bindValue(":id", $usuarioId[0], PDO::PARAM_INT);
             
             $resultado = $statement->execute();
         } catch (PDOException $th) {
-            error_log("Error UsuarioModel->update(" . implode(",", $usuario) . ", $usuarioId)");
+            error_log("Error UsuarioModel->update(" . var_dump($usuario) . ", $usuarioId)");
             error_log($th->getMessage());
         } finally {
             $statement = null;

@@ -4,28 +4,15 @@ const $d = document
       $btnCancelar = $d.querySelector(".cancelar__btn"),
       $submitMsg = $d.querySelector(".submit_msg")
 
-function ajaxFetch(options){
-    const {url,method,fsuccess,ferror,data} = options
+const url = "http://proyecto.local/api/"
 
-    fetch(url,{
-        method: method || "GET",
-        headers:{
-            "Content-type":"application/json;charset=utf-8"
-        },
-        body:JSON.stringify(data)
-    })
-    .then(resp=>resp.ok?resp.json():Promise.reject(resp))
-    .then(json=>fsuccess(json))
-    .catch(error=>ferror(error))
-}
+const regExEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 function editarPerfil(data){
-    
-    ajaxFetch({
-        url:`http://proyecto.local/api/usuarios/12`,
+    ajax({
+        url:`${url}usuarios/${id}`,
         method:"PUT",
         fsuccess:(json)=>{
-            console.log(json)
             $submitMsg.style.color="green"
             $submitMsg.textContent = "Perfil editado correctamente"
         },
@@ -38,7 +25,49 @@ function editarPerfil(data){
     })
 
     $submitMsg.classList.remove("hidden")
-}      
+}
+
+function validarFormulario(){
+    let toret = true
+
+    const campos = $form.querySelectorAll(".input_perfil")
+
+    campos.forEach(campo => {
+        campo.style.border = "1px solid var(--main-color)"
+    })
+
+    if($form.nombre.value.trim() == ""){
+        ($form.nombre).parentElement.style.border = "1px solid red"
+        alert("El nombre es obligatorio")
+        toret = false
+    } else if($form.aps.value.trim() == ""){
+        ($form.aps).parentElement.style.border = "1px solid red"
+        alert("Los apellidos son obligatorios")
+        toret = false
+    } else if(!regExEmail.test($form.email.value.trim())){
+        ($form.email).parentElement.style.border = "1px solid red"
+        alert("El email no es válido")
+        toret = false
+    }
+
+    if($d.querySelector("#direccion")){
+        if($form.direccion.value.trim() == ""){
+            ($form.direccion).parentElement.style.border = "1px solid red"
+            alert("La dirección es obligatoria")
+            toret = false
+        } else if($form.horario_invierno.value.trim() == ""){
+            ($form.horario_invierno).parentElement.style.border = "1px solid red"
+            alert("El horario de invierno es obligatorio")
+            toret = false
+        } else if($form.horario_verano.value.trim() == ""){
+            ($form.horario_verano).parentElement.style.border = "1px solid red"
+            alert("El horario de verano es obligatorio")
+            toret = false
+        }
+    }    
+
+    return toret
+}
 
 $d.addEventListener("DOMContentLoaded", () => {
     $form.addEventListener("click", ev=>{
@@ -50,11 +79,26 @@ $d.addEventListener("DOMContentLoaded", () => {
 
     $btnGuardar.addEventListener("click", ev=>{
         ev.preventDefault()
-        editarPerfil({
-            nombre:$form.querySelector("#nombre").value,
-            apellidos:$form.querySelector("#aps").value,
-            email:$form.querySelector("#email").value
-        })
-        $d.querySelectorAll("input").disabled=true
+        if(validarFormulario()){
+            let cambios = {
+                nombre:$form.querySelector("#nombre").value,
+                apellidos:$form.querySelector("#aps").value,
+                email:$form.querySelector("#email").value
+            }
+    
+            if($form.querySelector("#direccion")){
+                cambios = {
+                    nombre:$form.querySelector("#nombre").value,
+                    apellidos:$form.querySelector("#aps").value,
+                    email:$form.querySelector("#email").value,
+                    direccion: $form.querySelector("#direccion").value,
+                    horario_invierno: $form.querySelector("#horario_invierno").value,
+                    horario_verano: $form.querySelector("#horario_verano").value
+                }
+            }
+    
+            editarPerfil(cambios)
+            $d.querySelectorAll("input").disabled=true
+        }
     })
 })
