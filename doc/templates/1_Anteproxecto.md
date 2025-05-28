@@ -89,9 +89,15 @@ Optimización de tempo e esforzo para os nosos usuarios.
 
 Tendo en conta que o desarrollo da páxina está creado por unha soa persoa, o que mellor se adapta sería ser autónomo.
 
-Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén sería por dúas principais ventaxas: 
+Esta elección, ademáis de ser polo número de empleados (unha persoa), tamén sería por varias principais ventaxas: 
 1. Non tería que aportar capital inicial.
 2. Existencia de axudas para autónomos.
+
+En canto á tributación, tería unha vantaxe: como autónomo tributo según o que gañe, dándome unha maior libertade nas finanzas, xa que non tería que tributar o total, senón que tributaría sobre o restante de pagar os gastos de actividade.
+
+Outro motivo é a Tarifa Cero que se ofrece en Galicia. Grazas a esta medida, durante o primeiro ano non teño que pagar a cuota mensual á SS, o que supón un aforro importante ao comezar.
+
+E por último, polos trámites, xa que hoxe en día podes facerte autónomo incluso online e en pouco tempo.
 
 ### 2.7- Investimentos
 
