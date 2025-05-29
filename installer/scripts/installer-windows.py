@@ -21,7 +21,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Construimos la ruta absoluta a "../codigo" desde la ubicación del script
 path_codigo = os.path.abspath(os.path.join(script_dir, "../../codigo"))
-path_destino = "C:/xampp/htdocs/prohive6"
+path_destino = "C:/xampp/htdocs/prohive"
 
 # 1. Crear el directorio de destino si no existe
 os.makedirs(path_destino, exist_ok=True)
@@ -36,19 +36,19 @@ for item in os.listdir(path_codigo):
         shutil.copy2(src_path, dest_path)
 
 # 3. Añadir dominio local a /etc/hosts
-contenidoHosts = "127.0.0.1 proyecto6.local\n"
+contenidoHosts = "127.0.0.1 proyecto.local\n"
 with open(r"C:\Windows\System32\drivers\etc\hosts","r+") as f:
     content = f.read()
-    if "proyecto6.local" not in content:
+    if "proyecto.local" not in content:
         f.seek(0, 2)
         f.write(contenidoHosts)
 
 # 4. Añadir VirtualHost si no existe
 archivoVhosts = "C:/xampp/apache/conf/extra/httpd-vhosts.conf"
 vhost_block = '''<VirtualHost *:80>
-\tDocumentRoot "C:/xampp/htdocs/prohive6"
-\tServerName proyecto6.local
-\t<Directory "C:/xampp/htdocs/prohive6">
+\tDocumentRoot "C:/xampp/htdocs/prohive"
+\tServerName proyecto.local
+\t<Directory "C:/xampp/htdocs/prohive">
 \t    AllowOverride All
 \t    Require all granted
 \t</Directory>
@@ -56,7 +56,7 @@ vhost_block = '''<VirtualHost *:80>
 
 with open(archivoVhosts, "r+") as f:
     content = f.read()
-    if "ServerName proyecto6.local" not in content:
+    if "ServerName proyecto.local" not in content:
         f.seek(0, 2)
         f.write(vhost_block)
 
