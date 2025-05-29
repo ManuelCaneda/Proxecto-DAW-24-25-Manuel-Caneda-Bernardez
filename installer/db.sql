@@ -1,37 +1,16 @@
--- phpMyAdmin SQL Dump
--- version 5.2.2
--- https://www.phpmyadmin.net/
---
--- Servidor: db
--- Tiempo de generación: 28-05-2025 a las 21:48:05
--- Versión del servidor: 11.7.2-MariaDB-ubu2404
--- Versión de PHP: 8.2.28
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+02:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'abc123.';
-GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+CREATE USER IF NOT EXISTS 'prohive'@'localhost' IDENTIFIED BY 'abc123.';
+GRANT ALL PRIVILEGES ON *.* TO 'prohive'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 --
 -- Base de datos: `prohivedb`
 --
-CREATE DATABASE IF NOT EXISTS `prohivedb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_uca1400_ai_ci;
+CREATE DATABASE IF NOT EXISTS `prohivedb`;
 USE `prohivedb`;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `anuncios`
---
 
 CREATE TABLE `anuncios` (
   `id_anuncio` int(11) NOT NULL,
@@ -41,7 +20,7 @@ CREATE TABLE `anuncios` (
   `texto` text NOT NULL,
   `precio` decimal(10,2) DEFAULT NULL,
   `estado` varchar(50) NOT NULL DEFAULT 'dev'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+);
 
 --
 -- Volcado de datos para la tabla `anuncios`
@@ -68,14 +47,14 @@ CREATE TABLE `mensajes` (
   `fecha` date NOT NULL DEFAULT curdate(),
   `hora` time NOT NULL DEFAULT curtime(),
   `texto` text NOT NULL
-) ;
+);
 
 --
 -- Volcado de datos para la tabla `mensajes`
 --
 
 INSERT INTO `mensajes` (`id`, `id_emisor`, `id_receptor`, `fecha`, `hora`, `texto`) VALUES
-(63, 13, 14, '2025-05-25', '14:22:06', 'fhgjfhgj'),
+(63, 13, 14, '2025-05-25', '14:22:06', 'Este mensaje es una simple prueba'),
 (91, 14, 13, '2025-05-28', '13:59:15', 'jelou');
 
 -- --------------------------------------------------------
@@ -87,7 +66,7 @@ INSERT INTO `mensajes` (`id`, `id_emisor`, `id_receptor`, `fecha`, `hora`, `text
 CREATE TABLE `tipousuario` (
   `id` int(11) NOT NULL,
   `tipo_nombre` varchar(30) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+);
 
 --
 -- Volcado de datos para la tabla `tipousuario`
@@ -114,7 +93,7 @@ CREATE TABLE `usuarios` (
   `direccion` varchar(255) DEFAULT NULL,
   `horario_invierno` varchar(255) DEFAULT NULL,
   `horario_verano` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+);
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -139,7 +118,7 @@ CREATE TABLE `valoraciones` (
   `id_usuario` int(11) NOT NULL,
   `puntuacion` tinyint(4) NOT NULL CHECK (`puntuacion` between 1 and 5),
   `texto` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+);
 
 --
 -- Volcado de datos para la tabla `valoraciones`
@@ -193,10 +172,6 @@ ALTER TABLE `valoraciones`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
 -- AUTO_INCREMENT de la tabla `anuncios`
 --
 ALTER TABLE `anuncios`
@@ -221,17 +196,9 @@ ALTER TABLE `valoraciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- Restricciones para tablas volcadas
---
-
---
 -- Filtros para la tabla `mensajes`
 --
 ALTER TABLE `mensajes`
   ADD CONSTRAINT `mensajes_ibfk_1` FOREIGN KEY (`id_emisor`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `mensajes_ibfk_2` FOREIGN KEY (`id_receptor`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
