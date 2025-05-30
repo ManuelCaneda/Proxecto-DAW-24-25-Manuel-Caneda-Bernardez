@@ -15,7 +15,7 @@
 <body>
     <?php include_once('header.php'); ?>
     <main class="main main_pag_anuncio">
-        <section class="pag_anuncio_info">
+        <section class="pag_anuncio_info" style="padding-top:3rem">
         <article class="pag_anuncio_img">
             <figure>
                 <img src="" alt="Imagen del anuncio">
@@ -35,7 +35,7 @@
             <button class="btn contactar_empresa_btn">Contactar</button>
         </article>
         </section>
-        <section class="pag_anuncio_valoraciones">
+        <section class="pag_anuncio_valoraciones" style="padding-bottom:1rem">
             <article class="escribir_valoraciones">
                 <hgroup style="text-align:center">
                     <h2>Valoraciones</h2>
