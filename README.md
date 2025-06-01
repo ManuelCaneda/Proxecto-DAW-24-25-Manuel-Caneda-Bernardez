@@ -22,7 +22,7 @@ As tecnoloxías que serán utilizadas para a realización desta web son: HTML5, 
 
 ## Instalación / Posta en marcha
 
-Requírese de ter XAMPP instalado. Unha vez tendoo instalado, haberá que ir á carpeta 'instalar' e abrir o executable correcto dependendo do teu sistema operativo. Unha vez feito iso, importaremos o arquivo 'bd.sql' no phpMyAdmin (na url de 'localhost/phpmyadmin'), e a páxina xa sería accesible se entras na url 'proyecto.local'.
+Requírese de ter XAMPP instalado. Unha vez tendoo instalado, haberá que ir á carpeta 'installer' e abrir o executable correcto dependendo do teu sistema operativo. Unha vez feito iso, importaremos o arquivo 'db.sql' no phpMyAdmin (na url de 'localhost/phpmyadmin'), e a páxina xa sería accesible se entras na url 'proyecto.local'.
 
 ## Uso
 

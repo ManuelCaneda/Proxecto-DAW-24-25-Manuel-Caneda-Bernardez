@@ -13,9 +13,9 @@
 
 Para poñer en funcionamento a plataforma requírese dun dispositivo con un navegador e conexión a internet.
 
-Para o desenvolvemente da aplicación, foi empregado XAMPP como servidor local cos módulos MySQL e Apache. Para instalalo, descargamos a carpeta 'codigo' e 'install', e o metemos na mesma carpeta. Despois disto, iremos á carpeta 'install' e executaremos o arquivo correcto dependendo do noso sistema operativo, este arquivo nos instalará o proxecto en xampp e creará un dominio local.
+Para o desenvolvemente da aplicación, foi empregado XAMPP como servidor local cos módulos MySQL e Apache. Para instalalo, descargamos a carpeta 'codigo' e 'installer', e o metemos na mesma carpeta. Despois disto, iremos á carpeta 'installer' e executaremos o arquivo correcto dependendo do noso sistema operativo, este arquivo nos instalará o proxecto en xampp e creará un dominio local.
 
-Para cargar os datos na base de datos, importamos o arquivo 'bd.sql' (na carpeta 'install') no phpMyAdmin da seguinte forma: unha vez dentro da páxina, temos a opción de copiar e pegar o código (na sección de arriba chamada 'SQL') ou importalo directamente na sección de arriba chamada 'Importar'.
+Para cargar os datos na base de datos, importamos o arquivo 'db.sql' (na carpeta 'instaler') no phpMyAdmin da seguinte forma: unha vez dentro da páxina, temos a opción de copiar e pegar o código (na sección de arriba chamada 'SQL') ou importalo directamente na sección de arriba chamada 'Importar'.
 
 Unha vez feito todo, xa podemos abrir o proxecto buscando 'proyecto.local' no noso navegador.
 

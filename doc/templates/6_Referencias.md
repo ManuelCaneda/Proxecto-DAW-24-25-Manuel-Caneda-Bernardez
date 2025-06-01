@@ -25,6 +25,7 @@
 - Composer: https://getcomposer.org/
 - PHP: https://www.php.net
 - XAMPP: https://www.apachefriends.org/es/index.html
+- Python (archivos de instalación): https://www.python.org
 
 ## 4- Normas ou documentos legais
 
