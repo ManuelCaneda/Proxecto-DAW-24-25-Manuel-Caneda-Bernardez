@@ -21,8 +21,11 @@ Podes ver o prototipo facendo click [aquí](https://www.figma.com/design/YkZ0R1c
 
 ## 4- Probas
 
-- Varios problemas que tiven foron coa creación da api, posto que ao principio non era capaz de devolver un JSON o cal tivese algún texto con til, pero despois de moitas probas, tiven que recurrir a facer unha función que sanitice os textos mediante a codificación UTF-8, xa que por algún motivo nin sequera funcionaba nin cun head con html.
-- Outros problemas que tiven foi á hora de crear os chats, xa que á hora de facer que os mensaxes tivesen scroll propio, non era capaz de que o scroll aparecese na parte de abaixo dos mensaxes. A solución foi engadir a seguinte línea de código no JS: $mensajes.scrollTop = $mensajes.scrollHeight;
-
+- Probouse a facer login nun navegador e ir páxina por páxina copiando a url e pegándoa en outro navegador para comprobar que non te deixaba entrar nelas.
+- Fíxose o mesmo ao revés, para comprobar que os usuarios que xa estaban con login feito non podían acceder á landing page nin ás páxinas de login nin rexistro.
+- Probouse a iniciar sesión desde dous navegadores en distintos usuarios para mandarse mensaxes entre eles e comprobar que os chats que aparecían fosen os correctos e que os mensaxes se iban actualizando a tempo real.
+- Probouse toda a zona de administración, comprobando que os usuarios e anuncios podían editarse, e que tanto os usuarios, anuncios e valoracións se eliminaban, ademáis de comprobar que o administrador podía falar desde ahí cos usuarios.
+- Fixéronse todas as probas dos formularios, como comprobar que as contraseñas coinciden á hora de rexistrarse, que os correos son válidos, que os contidos dos mensaxes no sistema de mensaxería non poden ser vacíos...
+- Encontreime con varios problemas á hora de crear o sistema de mensaxería, o máis difícil de resolver foi que os mensaxes aparecesen co scroll feito hacia abaixo, solucionouse engadindo a seguinte línea de código no JS: $mensajes.scrollTop = $mensajes.scrollHeight;. Tamén á hora de obter os mensaxes entre dous usuarios, o cal se resolveu mediante á creación dunha url na api que sería "/api/mensajes/conversacion/id1/id2".
 
 [**<-Anterior**](../../README.md)
