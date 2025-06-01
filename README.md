@@ -44,7 +44,7 @@ Formas de contactar conmigo:
 
 ## Licenza
 
-> *EXPLICACIÓN*: É requisito INDISPENSABLE o licenciar explicitamente o proxecto software. Recoméndase licenciar con GNU Free Documentation License Version 1.3*. Crear un ficheiro `LICENSE` na raiz do repo, co teu ficheiro de licenza. Lembra que se empregas unha licenza de software libre estás a autorizar a derivación da túa obra baixo a mesma licenza que elixas, podendo dar continuidade, p. e. outro alumno, para continuar o teu proxecto noutro curso.
+[GNU GENERAL PUBLIC LICENSE](./LICENSE)
 
 ## Índice
 
@@ -59,8 +59,3 @@ Formas de contactar conmigo:
 ## Guía de contribución
 
 Se queres contribuir no proxecto na implementación de novas funcionalidades, correccións ou optimizacións, podes facer un fork do repositorio e facer pull requests a partir do fork.
-
-## Links
-
-> EXPLICACIÓN*: Ligazóns externas e descipciones destas ligazóns que creas conveniente indicar aquí. Xeralmente xa van estar integrados coa túa documentación, pero se requires realizar unha listaxe deles, leste é o lugar.
->
