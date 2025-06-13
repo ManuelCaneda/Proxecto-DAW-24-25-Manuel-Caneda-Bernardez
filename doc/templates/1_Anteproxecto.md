@@ -232,11 +232,11 @@ Sería unha empresa viable prácticamente dende o principio, e contamos que pouc
 
 ## 3- Requirimentos técnicos
 
-- **Infraestructura**: XAMPP. **EN PUESTA EN PRODUCCIÓN!!!**
+- **Infraestructura**: Servidor VPS.
 - **Backend**: PHP, MySQL - phpMyAdmin, API Rest con PHP.
-- **Frontend:** HTML5, CSS3, JavaScript, AJAX
-- **Prototipo**: Figma
-- **Librerías**: JavaScript: AOS, Math.js
+- **Frontend:** HTML5, CSS3, JavaScript, AJAX.
+- **Prototipo**: Figma.
+- **Librerías**: JavaScript: AOS - PHP: vlucas/phpdotenv (Composer).
 
 ## 4- Planificación
 
