@@ -150,8 +150,8 @@ Por aquí temos as tablas de prezos das suscripcións e publicidades:
     <td><b>Anual</b></td>
   </tr>
   <tr>
-    <td><b>99.99€</b></td>
     <td><b>9.99€</b></td>
+    <td><b>99.99€</b></td>
   </tr>
 </table>
 
