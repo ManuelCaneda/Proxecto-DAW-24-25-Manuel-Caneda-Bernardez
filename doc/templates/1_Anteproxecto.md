@@ -236,7 +236,7 @@ Sería unha empresa viable prácticamente dende o principio, e contamos que pouc
 - **Backend**: PHP, MySQL - phpMyAdmin, API Rest con PHP.
 - **Frontend:** HTML5, CSS3, JavaScript, AJAX.
 - **Prototipo**: Figma.
-- **Librerías**: JavaScript: AOS - PHP: vlucas/phpdotenv (Composer).
+- **Librerías**: JavaScript: AOS e SweetAlert2 - PHP: vlucas/phpdotenv (Composer).
 
 ## 4- Planificación
 

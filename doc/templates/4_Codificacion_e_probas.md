@@ -17,7 +17,8 @@ Podes ver o prototipo facendo click [aquí](https://www.figma.com/design/YkZ0R1c
 ## 3- Innovación
 
 - Emprego a librería AOS, a cal non ten unha maior complicación que colocar unha clase concreta aos elementos que necesite que sexa afectado, polo que me funcionou á primeira.
-- Tamén emprego a librería 'vlucas/phpdotenv', de PHP, a cal foi un auténtico reto que funcionase, debido a que a ruta do archivo daba problemas á hora de intentar obter o seu contido, tanto na api como no MVC. A solución foi a base de proba a error.
+- Tamén uso a librería de SweetAlert2, a cal é un obxeto moi sencillo de utilizar, no que lle señalas os textos dos botón de success e error, e podes poñerlle un icono propio da librería de forma opcional.
+- Por último, fixen uso da librería 'vlucas/phpdotenv', de PHP, a cal foi un auténtico reto que funcionase, debido a que a ruta do archivo daba problemas á hora de intentar obter o seu contido, tanto na api como no MVC. A solución foi a base de proba a error.
 
 ## 4- Probas
 
