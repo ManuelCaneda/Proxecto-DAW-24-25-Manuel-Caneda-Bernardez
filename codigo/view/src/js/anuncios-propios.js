@@ -108,7 +108,17 @@ $d.addEventListener("DOMContentLoaded"  , () => {
 
         if(ev.target.classList.contains("fa-trash")){
             ev.preventDefault()
-            deleteAnuncio(ev.target.dataset.id)
+            Swal.fire({
+                title: "¿Estás seguro de que quieres eliminar este anuncio? Esta acción no se puede deshacer.",
+                showDenyButton: true,
+                confirmButtonText: "Borrar",
+                denyButtonText: `Cancelar`
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    id = ev.target.dataset.id
+                    deleteAnuncio(id)
+                }
+            });
         }
     })
 })

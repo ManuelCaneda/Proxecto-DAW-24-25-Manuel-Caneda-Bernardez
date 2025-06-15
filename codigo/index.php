@@ -28,6 +28,12 @@ function checkLoggedIn($action) {
     return $sitio;
 }
 
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<?php
+
 // Generar un token CSRF nuevo cada vez que entremos en una página y almacenarlo en la sesión
 if(isset($_SESSION['logged'])): // Si el usuario está logueado, lo generamos y lo pasamos al frontend para usarlo con ajax
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));

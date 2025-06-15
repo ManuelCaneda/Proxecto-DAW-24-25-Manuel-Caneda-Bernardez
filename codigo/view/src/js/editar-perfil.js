@@ -38,30 +38,54 @@ function validarFormulario(){
 
     if($form.nombre.value.trim() == ""){
         ($form.nombre).parentElement.style.border = "1px solid red"
-        alert("El nombre es obligatorio")
+        Swal.fire({
+            title: "ERROR",
+            text: "El nombre es obligatorio.",
+            icon: "error"
+        });
         toret = false
     } else if($form.aps.value.trim() == ""){
         ($form.aps).parentElement.style.border = "1px solid red"
-        alert("Los apellidos son obligatorios")
+        Swal.fire({
+            title: "ERROR",
+            text: "Los apellidos son obligatorios.",
+            icon: "error"
+        });
         toret = false
     } else if(!regExEmail.test($form.email.value.trim())){
         ($form.email).parentElement.style.border = "1px solid red"
-        alert("El email no es válido")
+        Swal.fire({
+            title: "ERROR",
+            text: "El email es obligatorio.",
+            icon: "error"
+        });
         toret = false
     }
 
     if($d.querySelector("#direccion")){
         if($form.direccion.value.trim() == ""){
             ($form.direccion).parentElement.style.border = "1px solid red"
-            alert("La dirección es obligatoria")
+            Swal.fire({
+                title: "ERROR",
+                text: "La dirección es obligatoria.",
+                icon: "error"
+            });
             toret = false
         } else if($form.horario_invierno.value.trim() == ""){
             ($form.horario_invierno).parentElement.style.border = "1px solid red"
-            alert("El horario de invierno es obligatorio")
+            Swal.fire({
+                title: "ERROR",
+                text: "El horario de invierno es obligatorio.",
+                icon: "error"
+            });
             toret = false
         } else if($form.horario_verano.value.trim() == ""){
             ($form.horario_verano).parentElement.style.border = "1px solid red"
-            alert("El horario de verano es obligatorio")
+            Swal.fire({
+                title: "ERROR",
+                text: "El horario de verano es obligatorio.",
+                icon: "error"
+            });
             toret = false
         }
     }    

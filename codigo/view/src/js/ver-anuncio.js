@@ -126,12 +126,18 @@ function enviarMensaje(data) {
         url: `${url}mensajes`,
         method: "POST",
         fsuccess: () => {
-            alert("Mensaje enviado correctamente.")
-            //window.location.href = `http://proyecto.local/?controller=user&action=chat` // Redirigir al anuncio
+            Swal.fire({
+                title: "Hecho!",
+                text: "El mensaje se ha enviado correctamente.",
+                icon: "success"
+            });
         },
         ferror: (error) => {
-            console.log(error)
-            alert("Ha ocurrido un error al enviar el mensaje. Comprueba que el mensaje tiene por lo menos 4 caracteres.")
+            Swal.fire({
+                title: "Ups...",
+                text: "Ha ocurrido un error al enviar el mensaje. Comprueba que el mensaje tiene por lo menos 4 caracteres.",
+                icon: "error"
+            });
         },
         data: data
     })
@@ -147,7 +153,11 @@ $d.addEventListener("DOMContentLoaded", () => {
         if(comprobarValoracion()){
             enviarValoracion()
         } else {
-            alert("La valoración debe tener al menos 10 caracteres.")
+            Swal.fire({
+                title: "ERROR",
+                text: "La valoración debe tener al menos 10 caracteres.",
+                icon: "error"
+            });
         }
     })
     
@@ -182,7 +192,11 @@ $d.addEventListener("DOMContentLoaded", () => {
         
                 enviarMensaje(msg)
             } else {
-                alert("El mensaje debe tener al menos 4 caracteres.")
+                Swal.fire({
+                    title: "ERROR",
+                    text: "El mensaje debe tener al menos 4 caracteres.",
+                    icon: "error"
+                });
             }
         }
     })

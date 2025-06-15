@@ -37,15 +37,27 @@ function validarFormulario(){
 
     if($form.nombre.value.trim() == ""){
         $form.nombre.style.border = "1px solid red"
-        alert("El nombre es obligatorio")
+        Swal.fire({
+            title: "ERROR",
+            text: "El nombre es obligatorio.",
+            icon: "error"
+        });
         toret = false
     } else if($form.descripcion.value.trim() == ""){
         $form.descripcion.style.border = "1px solid red"
-        alert("La descripción es obligatoria")
+        Swal.fire({
+            title: "ERROR",
+            text: "La descripción es obligatoria.",
+            icon: "error"
+        });
         toret = false
     } else if($form.precio.value==0){
         $form.precio.style.border = "1px solid red"
-        alert("El precio es obligatorio")
+        Swal.fire({
+            title: "ERROR",
+            text: "El precio es obligatorio.",
+            icon: "error"
+        });
         toret = false
     }
 
@@ -68,7 +80,7 @@ $d.addEventListener("DOMContentLoaded", () => {
             ev.preventDefault()
             let cambios = {
                 id_cliente:id,
-                imagen:$form.querySelector("#imagen").value,
+                imagen:($form.querySelector("#imagen").value).trim()!="" ? $form.querySelector("#imagen").value : "http://proyecto.local/uploads/anuncio_img_default.png",
                 nombre:$form.querySelector("#nombre").value,
                 texto:$form.querySelector("#descripcion").value,
                 precio:$form.querySelector("#precio").value

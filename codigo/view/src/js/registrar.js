@@ -14,24 +14,44 @@ function validarFormulario() {
 
     if ($nombre.value.trim() == "") {
         $nombre.style.border = "2px solid red";
-        alert("El nombre es obligatorio.");
+        Swal.fire({
+            title: "ERROR",
+            text: "El nombre es obligatorio.",
+            icon: "error"
+        });
         toret = false;
     } else if ($aps.value.trim() == "") {
         $aps.style.border = "2px solid red";
-        alert("Los apellidos son obligatorios.");
+        Swal.fire({
+            title: "ERROR",
+            text: "Los apellidos son obligatorios.",
+            icon: "error"
+        });
         toret = false;
     } else if (!regExEmail.test($email.value.trim())) {
         $email.style.border = "2px solid red";
-        alert("El email no es válido.");
+        Swal.fire({
+            title: "ERROR",
+            text: "El email no es válido.",
+            icon: "error"
+        });
         toret = false;
     } else if ($pass.value.trim() == "") {
         $pass.style.border = "2px solid red";
-        alert("La contraseña es obligatoria.");
+        Swal.fire({
+            title: "ERROR",
+            text: "La contraseña es obligatoria.",
+            icon: "error"
+        });
         toret = false;
     } else if ($pass.value !== $pass2.value) {
         $pass.style.border = "2px solid red";
         $pass2.style.border = "2px solid red";
-        alert("Las contraseñas no coinciden.");
+        Swal.fire({
+            title: "ERROR",
+            text: "Las contraseñas no coinciden.",
+            icon: "error"
+        });
         toret = false;
     }
 

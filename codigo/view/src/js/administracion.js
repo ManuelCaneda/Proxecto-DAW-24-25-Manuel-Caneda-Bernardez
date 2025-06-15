@@ -542,7 +542,13 @@ $d.addEventListener('DOMContentLoaded', () => {
 
     $contenido.addEventListener('click', ev => {
         if(ev.target.classList.contains('fa-trash')) {
-            if(window.confirm("¿Estás seguro de que quieres eliminarlo? Esta acción no se puede deshacer.")) {
+            Swal.fire({
+                title: "¿Estás seguro de que quieres eliminarlo? Esta acción no se puede deshacer.",
+                showDenyButton: true,
+                confirmButtonText: "Borrar",
+                denyButtonText: `Cancelar`
+              }).then((result) => {
+            if (result.isConfirmed) {
                 id = ev.target.dataset.id
                 switch ($titulo.textContent) {
                     case "Usuarios":
@@ -558,6 +564,23 @@ $d.addEventListener('DOMContentLoaded', () => {
                     break
                 }
             }
+            });
+            // if(window.confirm("¿Estás seguro de que quieres eliminarlo? Esta acción no se puede deshacer.")) {
+            //     id = ev.target.dataset.id
+            //     switch ($titulo.textContent) {
+            //         case "Usuarios":
+            //             deleteUsuario(id)
+            //         break
+    
+            //         case "Anuncios":
+            //             deleteAnuncio(id)
+            //         break
+    
+            //         case "Valoraciones":
+            //             deleteValoracion(id)
+            //         break
+            //     }
+            // }
         }
 
         if(ev.target.classList.contains('fa-user-pen') || ev.target.classList.contains('fa-pen')) {
