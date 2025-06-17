@@ -5,7 +5,7 @@ const $d = document,
       $contactarBtn = $d.querySelector(".contactar_empresa_btn"),
       $infoAnuncio = $d.querySelector(".pag_anuncio_texto")
 
-const url = "http://proyecto.local/api/"
+const url = "https://mcaneda.iescotarelo.es/api/"
 
 let anuncio, cliente, usuario, addTextareaContacto = false
 const valoraciones = [],
