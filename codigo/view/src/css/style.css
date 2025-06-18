@@ -302,6 +302,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
 }
 
 /*=====  End of Estilos del footer  ======*/
@@ -1176,11 +1178,15 @@
         justify-content: center;
     }
 
-    .header__nav, .header__nav ul li, .header__loginBtn{
+    .header__nav, .header__nav ul li{
         position: absolute;
         width: 0;
         height: 0;
         transform: translateY(-1000000000000px);
+    }
+
+    .header__loginBtn {
+        margin-bottom: 1rem;
     }
 
     .lista_valoraciones {
