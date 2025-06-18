@@ -3,7 +3,7 @@ const $d = document,
       $titulo = $d.querySelector('h2'),
       $contenido = $d.querySelector('.contenido-administracion')
 
-const url = "https://mcaneda.iescotarelo.es/api/"
+const url = "http://proyecto.local/api/"
 
 const usuarios = [],
       anuncios = [],

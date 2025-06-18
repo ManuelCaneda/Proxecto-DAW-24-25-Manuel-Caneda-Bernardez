@@ -5,7 +5,7 @@ const $d = document
       $submitMsg = $d.querySelector(".submit_msg")
 
 const id = $d.querySelector(".header__perfil").dataset.id,
-      url = "https://mcaneda.iescotarelo.es/api/"
+      url = "http://proyecto.local/api/"
 
 function crearAnuncio(data){
     ajax({

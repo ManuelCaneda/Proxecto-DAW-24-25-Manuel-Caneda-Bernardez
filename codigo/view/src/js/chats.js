@@ -7,7 +7,7 @@ const mensajesEnviados = [],
       idContactos = [],
       contactos = [],
       idPropia = $d.querySelector(".header__perfil").dataset.id,
-      url = "https://mcaneda.iescotarelo.es/api/",
+      url = "http://proyecto.local/api/",
       mensajes = []
 
 let idOtro,

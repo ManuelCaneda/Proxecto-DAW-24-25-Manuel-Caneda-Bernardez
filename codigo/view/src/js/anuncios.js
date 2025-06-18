@@ -6,7 +6,7 @@ const $d = document,
       $busquedaBtn = $d.querySelector(".header__buscador button");
 
 const anuncios = [];
-const url = "https://mcaneda.iescotarelo.es/api/"
+const url = "http://proyecto.local/api/"
 
 function getAnuncios(){
     $titulo.textContent = "Destacados"

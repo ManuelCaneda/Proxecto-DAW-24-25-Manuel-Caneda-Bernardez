@@ -5,7 +5,7 @@ const $d = document
       $btnCancelar = $d.querySelector(".cancelar__btn"),
       $submitMsg = $d.querySelector(".submit_msg")
 
-const url = "https://mcaneda.iescotarelo.es/api/"
+const url = "http://proyecto.local/api/"
 
 function getAnuncio(){
     ajax({

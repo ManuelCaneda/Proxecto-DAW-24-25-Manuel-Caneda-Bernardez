@@ -5,7 +5,7 @@ const $d = document,
 const anuncios = [];
 let cliente
 
-const url = "https://mcaneda.iescotarelo.es/api/"
+const url = "http://proyecto.local/api/"
 const idPropio = $d.querySelector(".header__perfil").dataset.id
 
 function getCliente(){
