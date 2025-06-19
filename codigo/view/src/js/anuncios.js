@@ -53,7 +53,7 @@ function renderAnuncios(anuncios){
                 <p class="anuncio_price">${actual.precio}&euro;</p>
             </section>
             <p class="anuncio_desc">${actual.texto}</p>
-            <a href="?controller=page&action=verAnuncio&id=${actual.id_anuncio}" class="anuncio_btn">
+            <a href="/ver-anuncio?id=${actual.id_anuncio}" class="anuncio_btn">
                 <button class="anuncio_btn btn">Más información</button>
             </a>
         </li>

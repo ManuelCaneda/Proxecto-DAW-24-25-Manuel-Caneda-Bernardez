@@ -62,7 +62,7 @@ function renderAnuncios(anuncios, cliente){
                     </figure>
                 </section>
                 <section class="crear_anuncio_btns">
-                <a href="?controller=page&action=editarAnuncio&id=${actual.id_anuncio}">
+                <a href="/editar-anuncio?id=${actual.id_anuncio}">
                     <button class="anuncio_btn btn">Editar información</button>
                 </a>
                     <button class="btn fa-solid fa-trash" data-id="${actual.id_anuncio}">
@@ -103,7 +103,7 @@ $d.addEventListener("DOMContentLoaded"  , () => {
     $main.addEventListener("click", ev=>{
         if(ev.target.classList.contains("add_card")){
             ev.preventDefault()
-            window.location.href = "?controller=page&action=crearAnuncio"
+            window.location.href = "/crear-anuncio"
         }
 
         if(ev.target.classList.contains("fa-trash")){

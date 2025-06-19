@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./view/src/assets/img/favicon.png">
     <link rel="stylesheet" href="./view/src/css/style.css">
     <script>
-        let id = <?php echo $_GET['id'];?>
+        let id = <?php echo $data['id_anuncio'] ?>
     </script>
     <script src="./view/src/js/ver-anuncio.js" defer></script>
 </head>

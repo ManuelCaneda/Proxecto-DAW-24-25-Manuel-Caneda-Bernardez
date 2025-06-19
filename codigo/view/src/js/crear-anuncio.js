@@ -14,6 +14,7 @@ function crearAnuncio(data){
         fsuccess:(json)=>{
             $submitMsg.style.color="green"
             $submitMsg.textContent = "Anuncio creado correctamente"
+            window.location.href = "/inicio"
         },
         ferror:(error)=>{
             console.log(error)
@@ -64,9 +65,35 @@ function validarFormulario(){
     return toret
 }
 
+function convertirABase64(archivo) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result); // Devuelve la cadena Base64
+        reader.onerror = (error) => reject(error); // Maneja errores
+        reader.readAsDataURL(archivo); // Leer el archivo como una URL en Base64
+    });
+}
+
+function subirAnuncio(imagen){
+    // Crear el objeto cambios con los datos del formulario
+    const cambios = {
+        id_cliente: id,
+        imagen: imagen, // Imagen en formato Base64
+        nombre: $form.querySelector("#nombre").value,
+        texto: $form.querySelector("#descripcion").value,
+        precio: $form.querySelector("#precio").value,
+    };
+
+    // Enviar los datos al servidor
+    crearAnuncio(cambios);
+    $d.querySelectorAll("input").disabled=true
+}
+
 $d.addEventListener("DOMContentLoaded", () => {
     $form.addEventListener("click", ev=>{
-        ev.preventDefault()
+        if(ev.target!=$d.querySelector("input[type='file']"))
+            ev.preventDefault()
+
         if(ev.target.classList.contains("editar_campo_btn")){
             if(ev.target.parentElement.querySelector("input"))
                 ev.target.parentElement.querySelector("input").disabled = false
@@ -78,16 +105,19 @@ $d.addEventListener("DOMContentLoaded", () => {
     $btnGuardar.addEventListener("click", ev=>{
         if(validarFormulario()){
             ev.preventDefault()
-            let cambios = {
-                id_cliente:id,
-                imagen:($form.querySelector("#imagen").value).trim()!="" ? $form.querySelector("#imagen").value : "http://proyecto.local/uploads/anuncio_img_default.png",
-                nombre:$form.querySelector("#nombre").value,
-                texto:$form.querySelector("#descripcion").value,
-                precio:$form.querySelector("#precio").value
+
+            const archivo = $form.querySelector("#imagen").files[0];
+
+            if(!archivo){
+                subirAnuncio("")
+                return
             }
-    
-            crearAnuncio(cambios)
-            $d.querySelectorAll("input").disabled=true
+
+            convertirABase64(archivo).then((base64Imagen) => {
+                subirAnuncio(base64Imagen)
+            }).catch((error) => {
+                console.error("Error al convertir la imagen a Base64:", error);
+            });
         }
     })
 })

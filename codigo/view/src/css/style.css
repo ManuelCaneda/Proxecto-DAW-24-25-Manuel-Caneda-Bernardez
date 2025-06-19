@@ -492,6 +492,13 @@
     border-radius: 10px 10px 0 0;
 }
 
+.editar_anuncio_img, .editar_anuncio_img img {
+    width:300px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
 .anuncio_info{
     display: flex;
     justify-content: space-between;

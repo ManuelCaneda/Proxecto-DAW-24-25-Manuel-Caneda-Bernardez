@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="./view/src/assets/img/favicon.png">
     <link rel="stylesheet" href="./view/src/css/style.css">
     <script>
-        let idAnuncio = <?php echo $_GET['id'];?>
+        let idAnuncio = <?php echo $data['id_anuncio'] ?>
     </script>
     <script src="./view/src/js/editar-anuncio.js" defer></script>
 </head>
@@ -19,8 +19,11 @@
         <p class="submit_msg hidden"></p>
         <form action="" class="form_crear_anuncio">
             <p>
-                <label for="imagen">URL de la imagen:</label>
-                <input type="text" name="imagen" id="imagen">
+                <label for="imagen">Imagen:</label>
+                <figure class="editar_anuncio_img">
+                    <img src="" alt="">
+                </figure>
+                <input type="file" name="imagen" id="imagen">
             </p>
             <p>
                 <label for="nombre">Nombre:</label>

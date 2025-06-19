@@ -1,6 +1,6 @@
 <?php
     if(isset($_SESSION['logged'])){
-        header("Location: ?controller=page&action=main");
+        header("Location: inicio");
     } 
 ?>
 

@@ -28,7 +28,7 @@
         ?>
             <p class="register_false">Rellena todos los campos</p>
         <?php endif; ?>
-        <form class="register_form" action="?controller=user&action=checkRegistro" method="POST">
+        <form class="register_form" action="/check-registro" method="POST">
             <p>
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="John">
@@ -55,7 +55,7 @@
             </p>
             <button type="submit" class="btn registrar__btn">Registrarse</button>
         </form>
-        <p class="register__linkto__login">¿Ya tienes una cuenta? <a href="?controller=user&action=login">Inicia sesión</a></p>
+        <p class="register__linkto__login">¿Ya tienes una cuenta? <a href="/login">Inicia sesión</a></p>
     </main>
     
 </body>

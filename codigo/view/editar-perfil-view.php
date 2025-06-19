@@ -75,7 +75,7 @@
                 <button class="btn cancelar__btn">Cancelar</button>
             </a>
         </p>
-        <a href="?controller=user&action=logout">
+        <a href="/logout">
             <button class="btn logout__btn">Cerrar Sesión</button>
         </a>
    </main>

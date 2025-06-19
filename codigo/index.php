@@ -20,9 +20,9 @@ function checkLoggedIn($action) {
     ];
 
     if(!isset($_SESSION['logged']) && !in_array($action, $actionsPublicos)) {
-        $sitio = '?controller=page&action=land_page';
+        $sitio = '.';
     } else if(isset($_SESSION['logged']) && in_array($action, $actionsPublicos)) {
-        $sitio = '?controller=page&action=main';
+        $sitio = '/inicio';
     }
 
     return $sitio;
@@ -60,12 +60,47 @@ if(isset($_SESSION['logged'])): // Si el usuario está logueado, lo generamos y 
 </script>
 
 <?php
-
     endif;
 
-$controller = $_GET['controller']??null;
-$action = $_GET['action']??null;
+$uri = $_SERVER["REQUEST_URI"];
+$uri = explode("/", $uri);
+$pagina = $uri[1]??"/";
+$id = $_GET["id"]??null;
 
+// Leyenda del valor de cada elemento = [controller,action]
+$paginas = [
+    "" => ["page","land_page"],
+    "inicio" => ["page","main"],
+    "login" => ["user","login"],
+    "registrar" => ["user","registrar"],
+    "editar-perfil" => ["user","editarPerfil"],
+    "logout" => ["user","logout"],
+    "chat" => ["user","chat"],
+    "ver-anuncio" => ["page","verAnuncio"],
+    "crear-anuncio" => ["page","crearAnuncio"],
+    "editar-anuncio" => ["page","editarAnuncio"],
+    "aviso-legal" => ["page","avisoLegal"],
+    "rgpd" => ["page","rgpd"],
+    "404" => ["page","notFound"],
+    "check-login" => ["user","checkLogin"],
+    "check-registro" => ["user","checkRegistro"]
+];
+
+
+if(!isset($paginas[$pagina]) &&
+!str_contains($pagina, "editar-anuncio") && !str_contains($pagina, "ver-anuncio")) {
+    header("Location: 404");
+    exit;
+}
+
+if(str_contains($pagina, "editar-anuncio"))
+    $pagina = "editar-anuncio";
+
+if(str_contains($pagina, "ver-anuncio"))
+    $pagina = "ver-anuncio";
+
+$controller = $paginas[$pagina][0];
+$action = $paginas[$pagina][1];
 
 $redirect = checkLoggedIn($action);
 if (!empty($redirect)) {
@@ -73,12 +108,14 @@ if (!empty($redirect)) {
     exit;
 }
 
-
 try {
     $controller = Controller::getController($controller);
-    $controller->$action();
+    if($id!=null)
+        $controller->$action($id);
+    else
+        $controller->$action();
 } catch (\Throwable $th) {
     error_log($th->getMessage());
-    $controller = new PageController();
-    $controller->land_page();
+    header("Location: /404");
+    exit;
 }

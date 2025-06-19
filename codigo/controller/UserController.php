@@ -22,7 +22,7 @@ class UserController {
             if($user!=null){
                 session_start();
                 $_SESSION['logged'] = $user->getId();
-                header("Location: ?controller=page&action=main");
+                header("Location: inicio");
             } else {
                 return View::show("login",['error' => true]);
             }

@@ -21,7 +21,7 @@
         ?>
             <p class="login_false">El email y/o la contraseña es incorrecto. Vuelve a intentarlo.</p>
         <?php endif; ?>
-        <form class="login_form" action="?controller=user&action=checkLogin" method="POST">
+        <form class="login_form" action="/check-login" method="POST">
             <p>
                 <label for="email">Correo electrónico</label>
                 <input type="text" name="email" id="email" placeholder="johndoe@youremail.com">
@@ -34,7 +34,7 @@
 
             <button type="submit" class="btn login__btn">Entrar</button>
         </form>
-        <p class="login__linkto__register">¿No tienes cuenta? <a href="?controller=user&action=registrar">Regístrate</a></p>
+        <p class="login__linkto__register">¿No tienes cuenta? <a href="/registrar">Regístrate</a></p>
     </main>    
 </body>
 </html>

@@ -42,8 +42,6 @@ try {
     die();
 }
 
-
-
 $headers = getallheaders();
 $tokenCliente = $headers['X-CSRF-Token'] ?? '';
 

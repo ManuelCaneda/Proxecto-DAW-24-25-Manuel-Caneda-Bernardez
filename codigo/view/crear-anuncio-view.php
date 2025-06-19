@@ -14,10 +14,10 @@
     <main class="main crear_anuncio_main">
         <h1>Crear anuncio</h1>
         <p class="submit_msg hidden"></p>
-        <form action="" class="form_crear_anuncio">
+        <form action="" class="form_crear_anuncio" enctype="multipart/form-data">
             <p>
-                <label for="imagen">URL de la imagen:</label>
-                <input type="text" name="imagen" id="imagen" placeholder="http://proyecto.local/uploads/anuncio_img_default.png">
+                <label for="imagen">Imagen:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*">
             </p>
             <p>
                 <label for="nombre">Nombre:</label>

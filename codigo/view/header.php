@@ -5,11 +5,11 @@
     $model = new UsuarioModel();
     $user = $model->getById($_SESSION['logged']);
 
-    $controller = $_GET['controller']??null;
-    $action = $_GET['action']??null;
+    $uri = explode("/", $_SERVER['REQUEST_URI']);
+    $pagina = $uri[1];
 ?>
 
-<?php if($controller == 'user' && $action == 'editarPerfil'): ?>
+<?php if($pagina == 'editar-perfil'): ?>
 
     <header class="header header_perfil">
         <a class="header__logo" href=".">
@@ -17,16 +17,13 @@
         </a>
     </header>
 
-<?php else: ?>
-
-    
-
+<?php else: ?> 
     <header class="header header_home">
         <a class="header__logo" href=".">
             <img src="./view/src/assets/img/logo.png" alt="">
         </a>
 
-        <?php if($user->getTipo() == 2 && $controller == 'page' && $action == 'main'): ?>
+        <?php if($user->getTipo() == 2 && $pagina=='inicio'): ?>
 
         <form action="" class="header__buscador">
             <input type="text" placeholder="Buscar">
@@ -38,10 +35,10 @@
         <?php endif; ?>
         
         <section class="header__opciones">
-            <a href="?controller=user&action=chat" class="header__chat">
+            <a href="/chat" class="header__chat">
                 <i class="fa-solid fa-comments fa-2x"></i>
             </a>
-            <a href="?controller=user&action=editarPerfil" class="header__perfil" data-id="<?php echo $user->getId() ?>">
+            <a href="/editar-perfil" class="header__perfil" data-id="<?php echo $user->getId() ?>">
                 <i class="fa-solid fa-user fa-2x"></i>
             </a>
         </section>

@@ -192,8 +192,32 @@ class AnuncioModel extends Model
         return $resultados;
     }
 
+    public static function guardarImgAnuncio($img, $titulo)
+    {
+        // Decodificar la cadena Base64
+        $data = explode(',', $img);
+        $decoded_data = base64_decode(end($data));
+        
+        $id_usuario = $_SESSION['logged'];
+        $nombreImg = $id_usuario . "_" . $titulo . ".jpg";
+        $ruta = PATH_UPLOADS.$nombreImg;
+    
+        // Guardar la imagen en el archivo especificado
+        if (file_put_contents($ruta, $decoded_data)) {
+            return "http://proyecto.local/uploads/$nombreImg"; // Retorna la ruta del archivo guardado
+        } else {
+            return false; // Retorna false si hubo un error
+        }
+    }
+
     public function insert($anuncio)
     {
+        $urlImg = "http://proyecto.local/uploads/anuncio_img_default.png";
+        if($anuncio->imagen != null)
+            $urlImg = self::guardarImgAnuncio($anuncio->imagen, $anuncio->nombre);
+        
+        $anuncio->imagen = $urlImg;
+        
         $sql = "INSERT INTO anuncios(id_cliente,imagen,nombre,texto,precio)
         VALUES (:id_cliente, :imagen, :nombre, :texto, :precio)";
 
@@ -219,7 +243,10 @@ class AnuncioModel extends Model
     }
 
     public function update($anuncio, $anuncioId)
-    { 
+    {
+        $urlImg = self::guardarImgAnuncio($anuncio->imagen, $anuncio->nombre);
+        $anuncio->imagen = $urlImg;        
+
         $sql = "UPDATE anuncios SET
             imagen=:imagen,
             nombre=:nombre,

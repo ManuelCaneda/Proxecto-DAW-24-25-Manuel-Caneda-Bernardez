@@ -12,7 +12,7 @@ function getAnuncio(){
         url:`${url}anuncios/${idAnuncio}`,
         method:"GET",
         fsuccess:(json)=>{
-            $form.querySelector("#imagen").value = json.imagen
+            $form.querySelector("img").src = json.imagen
             $form.querySelector("#nombre").value = json.nombre
             $form.querySelector("#descripcion").value = json.texto
             $form.querySelector("#precio").value = json.precio
@@ -32,6 +32,7 @@ function editarAnuncio(data){
         fsuccess:(json)=>{
             $submitMsg.style.color="green"
             $submitMsg.textContent = "Has puesto el anuncio como un borrador"
+            window.location.href = "/inicio"
         },
         ferror:(error)=>{
             console.log(error)
@@ -51,6 +52,7 @@ function publicarAnuncio(data){
         fsuccess:(json)=>{
             $submitMsg.style.color="green"
             $submitMsg.textContent = "Anuncio publicado correctamente"
+            window.location.href = "/inicio"
         },
         ferror:(error)=>{
             console.log(error)
@@ -101,10 +103,52 @@ function validarFormulario(){
     return toret
 }
 
+function convertirABase64(archivo) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result); // Devuelve la cadena Base64
+        reader.onerror = (error) => reject(error); // Maneja errores
+        reader.readAsDataURL(archivo); // Leer el archivo como una URL en Base64
+    });
+}
+
+function subirAnuncio(imagen,estado){
+    // Crear el objeto cambios con los datos del formulario
+    const cambios = {
+        imagen: imagen, // Imagen en formato Base64
+        nombre: $form.querySelector("#nombre").value,
+        texto: $form.querySelector("#descripcion").value,
+        precio: $form.querySelector("#precio").value,
+        estado:estado
+    };
+
+    if(estado == "publicado")
+        publicarAnuncio(cambios)
+    else
+        editarAnuncio(cambios)
+
+    $d.querySelectorAll("input").disabled=true
+}
+
+function urlToFile(url, fileName) {
+    return fetch(url) // Descargar la imagen desde la URL
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Error al descargar la imagen");
+            }
+            return response.blob(); // Convertir la respuesta en un Blob
+        })
+        .then((blob) => {
+            return new File([blob], fileName, { type: blob.type }); // Crear un archivo a partir del Blob
+        });
+}
+
 $d.addEventListener("DOMContentLoaded", () => {
     getAnuncio()
     $form.addEventListener("click", ev=>{
-        ev.preventDefault()
+        if(ev.target!=$d.querySelector("input[type='file']"))
+            ev.preventDefault()
+
         if(ev.target.classList.contains("editar_campo_btn")){
             if(ev.target.parentElement.querySelector("input"))
                 ev.target.parentElement.querySelector("input").disabled = false
@@ -115,32 +159,56 @@ $d.addEventListener("DOMContentLoaded", () => {
 
     $btnPublicar.addEventListener("click", ev=>{
         ev.preventDefault()
-        if(validarFormulario()){
-            let cambios = {
-                imagen:($form.querySelector("#imagen").value).trim()!="" ? $form.querySelector("#imagen").value : "http://proyecto.local/uploads/anuncio_img_default.png",
-                nombre:$form.querySelector("#nombre").value,
-                texto:$form.querySelector("#descripcion").value,
-                precio:$form.querySelector("#precio").value,
-                estado:"publicado"
-            }
-    
-            publicarAnuncio(cambios)
+        if (validarFormulario()) {
+            let imgUrl = $form.querySelector("img").src;
+        
+            // Convertir la URL en un archivo
+            urlToFile(imgUrl, imgUrl.split("/").pop())
+                .then((archivo) => {
+                    // Si el cliente subió una imagen nueva, seleccionará esa:
+                    if ($form.querySelector("#imagen").files[0]) {
+                        archivo = $form.querySelector("#imagen").files[0];
+                    }
+        
+                    // Convertir la imagen (ya sea del input o la antigua) a Base64
+                    return convertirABase64(archivo);
+                })
+                .then((base64Imagen) => {
+                    // Subir el anuncio con la imagen en Base64
+                    subirAnuncio(base64Imagen, "publicado");
+                })
+                .catch((error) => {
+                    console.error("Error al procesar la imagen:", error);
+                });
         }
     })
 
     $btnGuardar.addEventListener("click", ev=>{
         ev.preventDefault()
+
         if(validarFormulario()){
-            let cambios = {
-                imagen:($form.querySelector("#imagen").value).trim()!="" ? $form.querySelector("#imagen").value : "http://proyecto.local/uploads/anuncio_img_default.png",
-                nombre:$form.querySelector("#nombre").value,
-                texto:$form.querySelector("#descripcion").value,
-                precio:$form.querySelector("#precio").value,
-                estado:"dev"
+            if (validarFormulario()) {
+                let imgUrl = $form.querySelector("img").src;
+            
+                // Convertir la URL en un archivo
+                urlToFile(imgUrl, imgUrl.split("/").pop())
+                    .then((archivo) => {
+                        // Si el cliente subió una imagen nueva, seleccionará esa:
+                        if ($form.querySelector("#imagen").files[0]) {
+                            archivo = $form.querySelector("#imagen").files[0];
+                        }
+            
+                        // Convertir la imagen (ya sea del input o la antigua) a Base64
+                        return convertirABase64(archivo);
+                    })
+                    .then((base64Imagen) => {
+                        // Subir el anuncio con la imagen en Base64
+                        subirAnuncio(base64Imagen, "dev");
+                    })
+                    .catch((error) => {
+                        console.error("Error al procesar la imagen:", error);
+                    });
             }
-    
-            editarAnuncio(cambios)
-            $d.querySelectorAll("input").disabled=true
         }
     })
 })

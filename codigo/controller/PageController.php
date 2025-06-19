@@ -10,16 +10,19 @@ class PageController {
         return View::show("main");
     }
 
-    public function verAnuncio(){
-        return View::show("ver-anuncio");
+    public function verAnuncio($idAnuncio){
+        $data["id_anuncio"] = $idAnuncio;
+        
+        return View::show("ver-anuncio",$data);
     }
 
     public function crearAnuncio() {
         return View::show("crear-anuncio");
     }
 
-    public function editarAnuncio() {
-        return View::show("editar-anuncio");
+    public function editarAnuncio($idAnuncio) {
+        $data["id_anuncio"] = $idAnuncio;
+        return View::show("editar-anuncio",$data);
     }
 
     public function avisoLegal(){
@@ -28,5 +31,9 @@ class PageController {
 
     public function rgpd(){
         return View::show("rgpd");
+    }
+
+    public function notFound(){
+        return View::show("404");
     }
 }
